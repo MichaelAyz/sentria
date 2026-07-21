@@ -28,7 +28,6 @@ ENV/
 env.bak/
 venv.bak/
 .idea/
-.vscode/
 
 # Databases
 *.sqlite3
@@ -46,3 +45,7 @@ stream.log
 SENTRIA_Task_Spec.md
 
 
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

@@ -12,28 +12,44 @@ def get_port(): return random.randint(1024, 65535)
 
 def gen_noise():
     if random.random() < 0.20:
-        return f"Connection reset for session on {get_resource()}"
+        return random.choice([
+            f"Connection status check for session on {get_resource()}",
+            f"Request processed for {get_user()} on {get_resource()}"
+        ])
     verbs = ["GET", "POST", "PUT", "Background sync", "Health check", "Session refreshed", "Cache populated"]
     return f"{random.choice(verbs)} {get_resource()} {random.choice([200, 201, 204, 301])} for {get_user()} from {get_ip()}:{get_port()}"
 
 def gen_error():
     if random.random() < 0.20:
-        return f"Repeated request pattern detected from {get_ip()}"
-    errors = ["ConnectionTimeout", "NullPointerException", "OutOfMemoryError", "DiskFullException", "DatabaseLockError", "TimeoutException", "IOException"]
+        return random.choice([
+            f"Connection timeout for request from {get_ip()} on {get_resource()}",
+            f"Access denied error for {get_user()} on {get_resource()}",
+            f"Repeated request failure for {get_user()} from {get_ip()}"
+        ])
+    errors = ["NullPointerException", "OutOfMemoryError", "DiskFullException", "DatabaseLockError", "IOException"]
     components = ["PaymentProcessor", "AuthService", "UserDb", "CacheNode", "MessageQueue", "S3Client"]
     return f"{random.choice(errors)} in {random.choice(components)} while accessing {get_resource()}"
 
 def gen_security():
     if random.random() < 0.20:
-        return f"Unexpected parameter format from {get_ip()} on {get_resource()}"
-    actions = ["Failed login attempt", "SQL injection payload detected", "Unauthorized access", "Invalid token signature", "Brute force pattern", "Directory traversal attempt"]
+        return random.choice([
+            f"Access denied: unauthorized access for {get_user()} from {get_ip()}",
+            f"Unexpected parameter input from {get_ip()} on {get_resource()}",
+            f"Repeated failed login attempt for {get_user()} from {get_ip()}"
+        ])
+    actions = ["SQL injection payload detected", "Brute force pattern", "Directory traversal attempt", "Invalid token signature", "Cross-site scripting attempt"]
     return f"{random.choice(actions)} for {get_user()} from {get_ip()} targeting {get_resource()}"
 
 def gen_warning():
     if random.random() < 0.20:
-        return f"Access denied for {get_user()} on {get_resource()}"
-    issues = ["Rate limit approaching", "High memory utilization", "Slow query execution", "Retrying failed request", "Connection pool near capacity"]
+        return random.choice([
+            f"Access denied for {get_user()} on {get_resource()}",
+            f"Unexpected response format from {get_ip()} on {get_resource()}",
+            f"Retry limit approaching for request from {get_ip()}"
+        ])
+    issues = ["Rate limit approaching", "High memory utilization", "Slow query execution", "Connection pool near capacity"]
     return f"{random.choice(issues)} for {get_user()}: {random.randint(1500, 5000)}ms latency on {get_resource()}"
+
 
 def generate_log():
     category = random.choices(["noise", "error", "security", "warning"], weights=[0.7, 0.15, 0.05, 0.1])[0]
