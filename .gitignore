@@ -32,17 +32,14 @@ venv.bak/
 # Databases
 *.sqlite3
 *.db
-service/feedback.db
+service/data/*.db
 
-# Generated training datasets (we only commit the generator, not the large generated CSVs)
+# Generated training datasets (we commit generator and curation code, not large generated CSVs)
 training/data/*.csv
 
-# Temporary test logs
-eval.log
-stream.log
-
-# Spec file
-SENTRIA_Task_Spec.md
+# Logs & test artifacts
+*.log
+.pytest_cache/
 
 
 branch_structure.json

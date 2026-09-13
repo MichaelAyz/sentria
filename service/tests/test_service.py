@@ -90,3 +90,29 @@ def test_needs_review_boundaries():
     
     assert results[2]["confidence"] > THRESHOLD_NEEDS_REVIEW
     assert results[2]["needs_review"] is False
+
+def test_ui_endpoint():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "Sentria" in response.text
+
+def test_stats_endpoint():
+    response = client.get("/api/stats")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "OPERATIONAL"
+    assert "feedbacks_collected" in data
+    assert "model_version" in data
+
+def test_classify_empty_logs():
+    response = client.post("/classify", json={"logs": []})
+    assert response.status_code == 200
+    assert response.json()["results"] == []
+
+def test_reload_endpoint():
+    response = client.get("/reload")
+    assert response.status_code == 200
+    assert response.json()["status"] == "reloaded"
+
+
+

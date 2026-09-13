@@ -1,0 +1,68 @@
+# Default values for sentria Helm chart.
+
+# Replica count pinned to 1 per ADR 8 to prevent SQLite lock contention
+replicaCount: 1
+
+image:
+  repository: sentria
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: "/metrics"
+  prometheus.io/port: "8000"
+
+podSecurityContext:
+  fsGroup: 1000
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+    - ALL
+
+service:
+  type: ClusterIP
+  port: 8000
+  targetPort: 8000
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+# Persistence for feedback.db (ADR 8 - Option A)
+persistence:
+  enabled: true
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  mountPath: /app/service/data
+
+
+# Secret Management (ADR 9 - Webhook injected via Secret, never committed)
+slack:
+  secretName: sentria-slack-secret
+  secretKey: SLACK_WEBHOOK_URL
+  # Set via CLI during deployment: helm install sentria ./k8s/sentria --set slack.webhookUrl="https://hooks.slack.com/..."
+  webhookUrl: ""
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

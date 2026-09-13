@@ -36,6 +36,8 @@ class ModelService:
     def predict(self, messages: list[str]) -> list[dict]:
         if not self.is_loaded():
             raise RuntimeError("Model is not loaded.")
+        if not messages:
+            return []
             
         categories = self.model.predict(messages)
         probabilities = self.model.predict_proba(messages)

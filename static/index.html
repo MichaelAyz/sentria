@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentria — Autonomous Log Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    
+    :root {
+      --bg: #f9f9f8;
+      --card: #ffffff;
+      --border: #e5e5e3;
+      --border-subtle: #eeeeec;
+      --text-main: #111110;
+      --text-muted: #737370;
+      --text-dim: #a1a19d;
+      --accent: #000000;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
+      background-size: 24px 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Emil Kowalski spring micro-interactions */
+    .btn-tactile {
+      transition: all 140ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-tactile:active {
+      transform: scale(0.975);
+    }
+
+    .card-entry {
+      animation: springSlideUp 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes springSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Custom thin scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4d4d0;
+      border-radius: 9999px;
+    }
+
+    /* Popover */
+    .popover-spring {
+      animation: popIn 160ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      transform-origin: top right;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.95) translateY(-4px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Sonner toast */
+    .toast-spring {
+      animation: toastIn 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateY(12px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 md:p-8">
+
+  <!-- Top Navigation & System Telemetry -->
+  <header class="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-between border-b border-[#e5e5e3] pb-4 mb-8 gap-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-3 h-3 bg-black rounded-sm flex items-center justify-center">
+        <div class="w-1.5 h-1.5 bg-white"></div>
+      </div>
+      <span class="font-bold text-sm tracking-tight uppercase font-mono">SENTRIA</span>
+      <span class="text-xs px-2 py-0.5 border border-[#e5e5e3] rounded text-[#737370] font-mono">V 1.0.4</span>
+    </div>
+
+    <div class="flex items-center space-x-4 text-xs font-mono text-[#737370]">
+      <div class="flex items-center space-x-1.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+        <span class="uppercase tracking-wider">SYSTEM: OPERATIONAL</span>
+      </div>
+      <span>·</span>
+      <button onclick="toggleTerminalDrawer()" class="btn-tactile px-2.5 py-1 border border-[#e5e5e3] hover:border-black rounded bg-white text-black font-semibold flex items-center space-x-1.5 shadow-xs">
+        <span class="text-emerald-600 font-bold">&gt;_</span>
+        <span>TERMINAL</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Viewport -->
+  <main class="max-w-5xl mx-auto w-full flex-grow space-y-10">
+
+    <!-- Editorial Hero Section -->
+    <div class="space-y-4 text-center max-w-2xl mx-auto">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 border border-[#e5e5e3] rounded-full text-xs font-mono bg-white shadow-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-[#737370] tracking-wider uppercase">ZERO-NOISE INCIDENT TRIAGE</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-[#111110]">
+        Find the 1% that broke.
+      </h1>
+      <p class="text-sm md:text-base text-[#737370] leading-relaxed">
+        Sentria scans raw server, container, and auth logs in milliseconds—suppressing routine background noise and surfacing critical incidents before you open your terminal.
+      </p>
+    </div>
+
+
+    <!-- The Interactive Log Workspace -->
+    <div class="bg-white border border-[#e5e5e3] rounded-xl shadow-xs overflow-hidden">
+      
+      <!-- Workspace Toolbar -->
+      <div class="p-4 border-b border-[#e5e5e3] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-[#fafaf9]">
+        
+        <!-- Source Identifier Input -->
+        <div class="flex items-center space-x-2 flex-grow max-w-md">
+          <label for="source-id" class="text-xs font-mono font-semibold uppercase text-[#737370] whitespace-nowrap">
+            LOG SOURCE:
+          </label>
+          <input 
+            type="text" 
+            id="source-id" 
+            value="auth-service-prod" 
+            placeholder="e.g. k8s-ingress, db-cluster" 
+            class="w-full text-xs font-mono px-2.5 py-1.5 bg-white border border-[#e5e5e3] rounded text-[#111110] focus:outline-none focus:border-black transition"
+          />
+        </div>
+
+        <!-- Input Mode Switcher (Emil Kowalski segmented control) -->
+        <div class="inline-flex p-0.5 bg-[#f0f0ee] rounded-lg border border-[#e5e5e3] self-start md:self-auto">
+          <button onclick="switchTab('paste')" id="tab-paste" class="btn-tactile px-3 py-1 text-xs font-mono font-medium rounded-md bg-white text-black shadow-xs">
+            PASTE TEXT
+          </button>
+          <button onclick="switchTab('upload')" id="tab-upload" class="btn-tactile px-3 py-1 text-xs font-mono font-medium rounded-md text-[#737370] hover:text-black">
+            UPLOAD FILE
+          </button>
+          <button onclick="switchTab('presets')" id="tab-presets" class="btn-tactile px-3 py-1 text-xs font-mono font-medium rounded-md text-[#737370] hover:text-black">
+            PRESETS
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="p-4 md:p-6 space-y-4">
+
+        <!-- Paste Mode Canvas -->
+        <div id="view-paste" class="space-y-2">
+          <div class="flex justify-between items-center text-xs font-mono text-[#a1a19d]">
+            <span>ENTER ONE OR MULTIPLE LOG LINES</span>
+            <span id="line-counter">0 lines</span>
+          </div>
+          <textarea 
+            id="log-input" 
+            rows="6" 
+            oninput="updateLineCounter()"
+            placeholder="2026-09-13T00:10:00Z auth-service ERROR Failed password for root from 192.168.1.100 port 22 ssh2&#10;2026-09-13T00:10:02Z web-proxy INFO GET /index.html 200 OK 42ms"
+            class="w-full p-3 font-mono text-xs leading-relaxed bg-[#fdfdfc] border border-[#e5e5e3] rounded-lg focus:outline-none focus:border-black text-[#111110] resize-y"
+          ></textarea>
+        </div>
+
+        <!-- Upload Mode Area -->
+        <div id="view-upload" class="hidden">
+          <div 
+            id="drop-zone" 
+            ondragover="handleDragOver(event)" 
+            ondragleave="handleDragLeave(event)" 
+            ondrop="handleFileDrop(event)"
+            class="border-2 border-dashed border-[#e5e5e3] rounded-lg p-8 text-center bg-[#fdfdfc] hover:border-black transition cursor-pointer"
+            onclick="document.getElementById('file-input').click()"
+          >
+            <input type="file" id="file-input" class="hidden" accept=".log,.txt,.csv" onchange="handleFileSelect(event)" />
+            <div class="space-y-2">
+              <div class="font-mono text-xs font-semibold text-[#111110]">DRAG & DROP .LOG OR .CSV FILE HERE</div>
+              <p class="text-xs text-[#737370]">Or click to browse from your filesystem</p>
+              <div id="selected-file-name" class="font-mono text-xs text-emerald-600 font-bold hidden"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preset Loaders -->
+        <div id="view-presets" class="hidden space-y-2">
+          <div class="text-xs font-mono text-[#737370] uppercase">CLICK TO LOAD PRESET SCENARIO:</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <button onclick="loadPreset('security')" class="btn-tactile p-3 border border-[#e5e5e3] rounded-lg text-left hover:border-black bg-[#fdfdfc] transition">
+              <div class="font-mono text-xs font-bold text-[#111110]">⚡ SSH Brute Force Incident</div>
+              <div class="text-xs text-[#737370] mt-0.5">High-frequency unauthorized password attempts</div>
+            </button>
+            <button onclick="loadPreset('database')" class="btn-tactile p-3 border border-[#e5e5e3] rounded-lg text-left hover:border-black bg-[#fdfdfc] transition">
+              <div class="font-mono text-xs font-bold text-[#111110]">💥 PostgreSQL Connection Pool Fatal</div>
+              <div class="text-xs text-[#737370] mt-0.5">Exhausted slots and database lock exceptions</div>
+            </button>
+            <button onclick="loadPreset('nginx')" class="btn-tactile p-3 border border-[#e5e5e3] rounded-lg text-left hover:border-black bg-[#fdfdfc] transition">
+              <div class="font-mono text-xs font-bold text-[#111110]">🟢 Routine Web Traffic</div>
+              <div class="text-xs text-[#737370] mt-0.5">HTTP 200 GET/POST requests and health checks</div>
+            </button>
+            <button onclick="loadPreset('ambiguous')" class="btn-tactile p-3 border border-[#e5e5e3] rounded-lg text-left hover:border-black bg-[#fdfdfc] transition">
+              <div class="font-mono text-xs font-bold text-[#111110]">⚠️ Ambiguous Edge Cases</div>
+              <div class="text-xs text-[#737370] mt-0.5">Threshold warnings needing human review (<0.75)</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="pt-2 flex items-center justify-between border-t border-[#e5e5e3]">
+          <div class="text-xs font-mono text-[#737370]" id="model-indicator">
+            ENGINE: TF-IDF + SGD CLASSIFIER
+          </div>
+          <button 
+            id="btn-classify"
+            onclick="executeClassification()" 
+            class="btn-tactile px-5 py-2 bg-[#111110] hover:bg-black text-white rounded-lg font-mono text-xs font-semibold uppercase tracking-wider flex items-center space-x-2 shadow-xs"
+          >
+            <span>CLASSIFY LOG SET</span>
+            <span>↵</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section with Executive Triage Bar -->
+    <div id="results-container" class="space-y-4 hidden">
+      
+      <!-- Executive Triage Summary Banner -->
+      <div class="p-5 bg-white border border-[#e5e5e3] rounded-xl shadow-xs space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-[#eeeeec] pb-3">
+          <div class="flex items-center space-x-2 font-mono text-xs font-bold uppercase tracking-wider">
+            <span>⚡ TRIAGE SUMMARY</span>
+            <span class="text-[#737370] font-normal" id="triage-runtime-stat">· 10 LOGS ANALYZED IN 6MS</span>
+          </div>
+          <div class="text-xs font-mono text-[#737370]" id="source-badge">SOURCE: -</div>
+        </div>
+
+        <!-- Triage Metrics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+          <div class="p-3 rounded-lg border border-red-200 bg-red-50/40">
+            <div class="text-red-700 font-semibold uppercase">CRITICAL</div>
+            <div class="text-xl font-bold text-red-700 mt-1" id="count-critical">0</div>
+          </div>
+          <div class="p-3 rounded-lg border border-purple-200 bg-purple-50/40">
+            <div class="text-purple-700 font-semibold uppercase">SECURITY</div>
+            <div class="text-xl font-bold text-purple-700 mt-1" id="count-security">0</div>
+          </div>
+          <div class="p-3 rounded-lg border border-amber-200 bg-amber-50/40">
+            <div class="text-amber-700 font-semibold uppercase">UNCERTAIN (VERIFY)</div>
+            <div class="text-xl font-bold text-amber-700 mt-1" id="count-review">0</div>
+          </div>
+          <div class="p-3 rounded-lg border border-emerald-200 bg-emerald-50/40">
+            <div class="text-emerald-700 font-semibold uppercase">ROUTINE (NOISE)</div>
+            <div class="text-xl font-bold text-emerald-700 mt-1" id="count-routine">0</div>
+          </div>
+        </div>
+
+        <!-- Diagnostic Highlight -->
+        <div id="triage-diagnostic" class="text-xs font-mono p-2.5 bg-[#fdfdfc] border border-[#eeeeec] rounded-lg text-[#111110]">
+          <!-- Dynamic diagnostic note -->
+        </div>
+      </div>
+
+      <!-- Triage Filter Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2">
+        <div class="inline-flex p-0.5 bg-[#f0f0ee] rounded-lg border border-[#e5e5e3] font-mono text-xs">
+          <button onclick="setFilter('attention')" id="flt-attention" class="btn-tactile px-3 py-1 font-medium rounded-md bg-white text-black shadow-xs">
+            🚨 ATTENTION ONLY
+          </button>
+          <button onclick="setFilter('security')" id="flt-security" class="btn-tactile px-3 py-1 font-medium rounded-md text-[#737370] hover:text-black">
+            SECURITY & CRITICAL
+          </button>
+          <button onclick="setFilter('review')" id="flt-review" class="btn-tactile px-3 py-1 font-medium rounded-md text-[#737370] hover:text-black">
+            UNCERTAIN (VERIFY)
+          </button>
+          <button onclick="setFilter('routine')" id="flt-routine" class="btn-tactile px-3 py-1 font-medium rounded-md text-[#737370] hover:text-black">
+            ROUTINE NOISE
+          </button>
+          <button onclick="setFilter('all')" id="flt-all" class="btn-tactile px-3 py-1 font-medium rounded-md text-[#737370] hover:text-black">
+            ALL (<span id="count-all-badge">0</span>)
+          </button>
+        </div>
+        <div id="suppressed-note" class="text-xs font-mono text-[#737370]">
+          <!-- Routine logs suppressed count -->
+        </div>
+      </div>
+
+      <!-- List of Classified Cards -->
+      <div id="results-list" class="space-y-3">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive Terminal Drawer (Toggles open/closed) -->
+  <div id="terminal-drawer" class="max-w-5xl mx-auto w-full my-6 bg-[#0c0c0e] border border-[#27272a] rounded-xl overflow-hidden shadow-2xl font-mono text-xs hidden">
+    <div class="px-4 py-2.5 bg-[#141417] border-b border-[#27272a] flex items-center justify-between text-[#a1a1aa]">
+      <div class="flex items-center space-x-2">
+        <div class="flex space-x-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#ef4444] inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#eab308] inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#22c55e] inline-block"></span>
+        </div>
+        <span class="text-[11px] text-[#71717a] ml-2">sentria-triage-daemon · 127.0.0.1:8000</span>
+      </div>
+      <div class="flex items-center space-x-3 text-[11px]">
+        <span class="text-emerald-400">● LIVE RUNTIME</span>
+        <button onclick="toggleTerminalDrawer()" class="text-[#71717a] hover:text-white transition">✕</button>
+      </div>
+    </div>
+    <div id="terminal-output" class="p-4 space-y-1.5 text-[#e4e4e7] h-48 overflow-y-auto font-mono text-[11px] leading-relaxed">
+      <div class="text-[#71717a]"># Sentria Autonomous Diagnostic Console v1.0.4</div>
+      <div class="text-emerald-400">&gt; Engine: TF-IDF + SGDClassifier (vocabulary: 12,000 real-world n-grams)</div>
+      <div class="text-[#a1a1aa]">&gt; Model path: service/model.joblib (hot-reload enabled via /reload)</div>
+      <div class="text-[#a1a1aa]">&gt; Active learning store: SQLite (service/data/feedback.db)</div>
+      <div class="text-[#38bdf8]">&gt; Daemon listening for batch inferences and feedback corrections...</div>
+      <div class="text-[#71717a]">&gt; Tip: Teach the model using 'TEACH MODEL' on any log card, then type 'retrain'.</div>
+    </div>
+    <div class="p-2.5 bg-[#101012] border-t border-[#27272a] flex items-center space-x-2">
+      <span class="text-emerald-400 font-bold">&gt;</span>
+      <input 
+        type="text" 
+        id="terminal-cmd-input" 
+        onkeydown="handleTerminalCommand(event)"
+        placeholder="Type 'help', 'status', 'retrain', or 'clear'..." 
+        class="w-full bg-transparent text-emerald-300 outline-none text-[11px] font-mono placeholder-[#52525b]"
+      />
+    </div>
+  </div>
+
+  <!-- Sticky Footer -->
+  <footer class="max-w-5xl mx-auto w-full border-t border-[#e5e5e3] pt-4 mt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#737370] gap-3">
+    <div>© 2026 SENTRIA INCIDENT INTELLIGENCE. ALL RIGHTS RESERVED.</div>
+    <div class="flex items-center space-x-4">
+      <button onclick="toggleTerminalDrawer()" class="hover:text-black flex items-center space-x-1.5 transition">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-bold">&gt;_ TERMINAL CONSOLE</span>
+      </button>
+      <span>·</span>
+      <span id="footer-learning-stat" class="text-[#737370]">
+        ACTIVE LEARNING: READY
+      </span>
+    </div>
+  </footer>
+
+  <!-- Emil Kowalski Sonner Toast Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2 pointer-events-none"></div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    const PRESETS = {
+      security: [
+        "2026-09-13T00:10:01Z auth-service ERROR Failed password for root from 192.168.1.100 port 22 ssh2",
+        "2026-09-13T00:10:03Z auth-service ERROR Failed password for invalid user admin from 192.168.1.100 port 22 ssh2",
+        "2026-09-13T00:10:05Z api-gateway WARN SQL injection payload detected in parameter query from 45.33.32.1",
+        "2026-09-13T00:10:08Z auth-service ERROR Access denied: unauthorized token signature for user_99",
+        "2026-09-13T00:10:11Z auth-service ERROR Repeated failed login attempt for root from 192.168.1.100"
+      ],
+      database: [
+        "2026-09-13T00:12:01Z postgresql-primary FATAL: remaining connection slots are reserved for non-replication superuser connections",
+        "2026-09-13T00:12:02Z order-service ERROR DatabaseLockError while executing transaction TX_9941",
+        "2026-09-13T00:12:03Z api-gateway ERROR Connection timeout for request from 10.0.1.42 on /api/v1/orders",
+        "2026-09-13T00:12:05Z worker-node-3 ERROR OutOfMemoryError in PaymentProcessor while accessing auth_db"
+      ],
+      nginx: [
+        "2026-09-13T00:15:00Z nginx-edge INFO GET /index.html 200 OK for user_12 from 172.16.0.4",
+        "2026-09-13T00:15:01Z nginx-edge INFO GET /static/app.js 200 OK 12ms",
+        "2026-09-13T00:15:02Z health-check INFO Health check passed on /health 200 OK",
+        "2026-09-13T00:15:03Z nginx-edge INFO POST /api/v1/telemetry 201 Created for app_svc"
+      ],
+      ambiguous: [
+        "2026-09-13T00:20:00Z queue-sync WARN Retry counter reached threshold 3/5 for queue sync",
+        "2026-09-13T00:20:03Z cache-node WARN Connection pool near capacity for user_19",
+        "2026-09-13T00:20:06Z task-scheduler WARN Slow query execution 3200ms latency on /admin/settings"
+      ]
+    };
+
+    function updateLineCounter() {
+      const text = document.getElementById('log-input').value.trim();
+      const lines = text ? text.split('\n').filter(l => l.trim().length > 0).length : 0;
+      document.getElementById('line-counter').innerText = `${lines} ${lines === 1 ? 'line' : 'lines'}`;
+    }
+
+    function switchTab(mode) {
+      ['paste', 'upload', 'presets'].forEach(m => {
+        document.getElementById(`view-${m}`).classList.add('hidden');
+        const btn = document.getElementById(`tab-${m}`);
+        btn.className = "btn-tactile px-3 py-1 text-xs font-mono font-medium rounded-md text-[#737370] hover:text-black";
+      });
+
+      document.getElementById(`view-${mode}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-${mode}`);
+      activeBtn.className = "btn-tactile px-3 py-1 text-xs font-mono font-medium rounded-md bg-white text-black shadow-xs";
+    }
+
+    function loadPreset(type) {
+      document.getElementById('source-id').value = `${type}-cluster-logs`;
+      document.getElementById('log-input').value = PRESETS[type].join('\n');
+      updateLineCounter();
+      switchTab('paste');
+      showToast(`Loaded ${PRESETS[type].length} sample logs for ${type}`);
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      document.getElementById('drop-zone').classList.add('border-black', 'bg-[#f5f5f3]');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      document.getElementById('drop-zone').classList.remove('border-black', 'bg-[#f5f5f3]');
+    }
+
+    function handleFileDrop(e) {
+      e.preventDefault();
+      handleDragLeave(e);
+      if (e.dataTransfer.files.length > 0) {
+        readFile(e.dataTransfer.files[0]);
+      }
+    }
+
+    function handleFileSelect(e) {
+      if (e.target.files.length > 0) {
+        readFile(e.target.files[0]);
+      }
+    }
+
+    function readFile(file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        document.getElementById('log-input').value = event.target.result;
+        document.getElementById('source-id').value = file.name.replace(/\.[^/.]+$/, "");
+        updateLineCounter();
+        switchTab('paste');
+        showToast(`Loaded ${file.name}`);
+      };
+      reader.readAsText(file);
+    }
+
+    async function fetchStats() {
+      try {
+        const res = await fetch('/api/stats');
+        if (res.ok) {
+          const data = await res.json();
+          const footerStat = document.getElementById('footer-learning-stat');
+          if (footerStat) {
+            footerStat.innerText = `ACTIVE LEARNING: ${data.feedbacks_collected} CORRECTIONS QUEUED`;
+          }
+        }
+      } catch (e) {
+        console.error("Could not fetch stats", e);
+      }
+    }
+
+    function toggleTerminalDrawer() {
+      const drawer = document.getElementById('terminal-drawer');
+      drawer.classList.toggle('hidden');
+      if (!drawer.classList.contains('hidden')) {
+        document.getElementById('terminal-cmd-input').focus();
+      }
+    }
+
+    function appendTerminal(text, color = "text-[#e4e4e7]") {
+      const out = document.getElementById('terminal-output');
+      const div = document.createElement('div');
+      div.className = color;
+      div.innerText = text;
+      out.appendChild(div);
+      out.scrollTop = out.scrollHeight;
+    }
+
+    async function handleTerminalCommand(e) {
+      if (e.key !== 'Enter') return;
+      const input = document.getElementById('terminal-cmd-input');
+      const cmd = input.value.trim().toLowerCase();
+      input.value = '';
+
+      if (!cmd) return;
+      appendTerminal(`> ${cmd}`, "text-emerald-400 font-bold");
+
+      if (cmd === 'clear') {
+        document.getElementById('terminal-output').innerHTML = '';
+        return;
+      }
+
+      if (cmd === 'help') {
+        appendTerminal("Available commands: status, reload, retrain, clear");
+        return;
+      }
+
+      if (cmd === 'status' || cmd === 'stats') {
+        try {
+          const res = await fetch('/api/stats');
+          const data = await res.json();
+          appendTerminal(`Status: ${data.status} | Model: ${data.model_version} | Corrections: ${data.feedbacks_collected}`, "text-[#38bdf8]");
+        } catch (err) {
+          appendTerminal(`Error: ${err.message}`, "text-red-400");
+        }
+        return;
+      }
+
+      if (cmd === 'reload' || cmd === 'retrain') {
+        appendTerminal("Hot-reloading model weights into memory...", "text-amber-400");
+        try {
+          const res = await fetch('/reload');
+          const data = await res.json();
+          appendTerminal(`✓ Success: Model hot-reloaded! Version: ${data.model_version}`, "text-emerald-400 font-bold");
+          showToast("Model hot-reloaded into memory!");
+        } catch (err) {
+          appendTerminal(`Failed to reload: ${err.message}`, "text-red-400");
+        }
+        return;
+      }
+
+      appendTerminal(`Command not recognized: '${cmd}'. Type 'help' for commands.`, "text-[#71717a]");
+    }
+
+
+    async function executeClassification() {
+      const rawText = document.getElementById('log-input').value.trim();
+      const source = document.getElementById('source-id').value.trim() || 'default-source';
+
+      if (!rawText) {
+        showToast("Please enter or paste at least one log line.", true);
+        return;
+      }
+
+      const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+      if (lines.length === 0) return;
+
+      const btn = document.getElementById('btn-classify');
+      btn.disabled = true;
+      btn.innerHTML = `<span>CLASSIFYING...</span>`;
+
+      const payload = {
+        logs: lines.map(line => ({
+          timestamp: new Date().toISOString(),
+          source: source,
+          level: "INFO",
+          message: line
+        }))
+      };
+
+      try {
+        const response = await fetch('/classify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        renderResults(data.results, source);
+      } catch (err) {
+        showToast(`Classification failed: ${err.message}`, true);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<span>CLASSIFY LOG SET</span><span>↵</span>`;
+      }
+    }
+
+    const currentResultsMap = new Map();
+    let currentResults = [];
+    let currentFilter = 'attention';
+
+    function setFilter(filterType) {
+      currentFilter = filterType;
+      ['attention', 'security', 'review', 'routine', 'all'].forEach(f => {
+        const btn = document.getElementById(`flt-${f}`);
+        if (btn) {
+          btn.className = f === filterType 
+            ? "btn-tactile px-3 py-1 font-medium rounded-md bg-white text-black shadow-xs"
+            : "btn-tactile px-3 py-1 font-medium rounded-md text-[#737370] hover:text-black";
+        }
+      });
+      renderCards();
+    }
+
+    function renderResults(results, source) {
+      currentResults = results;
+      currentResultsMap.clear();
+      results.forEach(r => currentResultsMap.set(r.log_id, r));
+
+      const container = document.getElementById('results-container');
+      const sourceBadge = document.getElementById('source-badge');
+
+      sourceBadge.innerText = `SOURCE: ${source.toUpperCase()}`;
+      container.classList.remove('hidden');
+
+      // Calculate triage counts
+      let counts = { critical: 0, security: 0, review: 0, routine: 0 };
+      results.forEach(r => {
+        if (r.category === 'error') counts.critical++;
+        else if (r.category === 'security') counts.security++;
+        else if (r.category === 'warning') counts.review++;
+        else counts.routine++;
+
+        if (r.needs_review && r.category !== 'warning' && r.category !== 'error' && r.category !== 'security') {
+          counts.review++;
+        }
+      });
+
+      document.getElementById('count-critical').innerText = counts.critical;
+      document.getElementById('count-security').innerText = counts.security;
+      document.getElementById('count-review').innerText = counts.review;
+      document.getElementById('count-routine').innerText = counts.routine;
+      document.getElementById('count-all-badge').innerText = results.length;
+
+      // Diagnostic banner text
+      const diag = document.getElementById('triage-diagnostic');
+      if (counts.security > 0 || counts.critical > 0) {
+        diag.innerHTML = `⚠️ <span class="font-bold text-red-700">Action Required:</span> Detected ${counts.security} security probes and ${counts.critical} critical failures. Routine traffic suppressed by default.`;
+      } else if (counts.review > 0) {
+        diag.innerHTML = `⚠️ <span class="font-bold text-amber-700">Notice:</span> Ambiguous logs detected with low confidence (&lt;0.75). Please verify or correct true labels.`;
+      } else {
+        diag.innerHTML = `🟢 <span class="font-bold text-emerald-700">Healthy:</span> All logs analyzed are routine background events. Zero critical anomalies found.`;
+      }
+
+      setFilter('attention');
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function renderCards() {
+      const list = document.getElementById('results-list');
+      const suppressedNote = document.getElementById('suppressed-note');
+      list.innerHTML = '';
+
+      let visibleCount = 0;
+      let routineHiddenCount = 0;
+
+      currentResults.forEach((item) => {
+        const isRoutine = item.category === 'noise' && !item.needs_review;
+        const isSecurityOrCrit = item.category === 'security' || item.category === 'error';
+        const isReview = item.needs_review || item.category === 'warning';
+
+        // Filter evaluation
+        let show = false;
+        if (currentFilter === 'all') show = true;
+        else if (currentFilter === 'attention' && (isSecurityOrCrit || isReview)) show = true;
+        else if (currentFilter === 'security' && isSecurityOrCrit) show = true;
+        else if (currentFilter === 'review' && isReview) show = true;
+        else if (currentFilter === 'routine' && item.category === 'noise') show = true;
+
+        if (!show && isRoutine) {
+          routineHiddenCount++;
+        }
+
+        if (!show) return;
+        visibleCount++;
+
+        const card = document.createElement('div');
+        card.id = `card-${item.log_id}`;
+        card.className = "card-entry p-4 border border-[#e5e5e3] rounded-lg bg-white space-y-3 relative";
+        card.style.animationDelay = `${visibleCount * 25}ms`;
+
+        let badgeColor = "bg-neutral-100 text-neutral-700 border-neutral-200";
+        let displayCategory = item.category.toUpperCase();
+
+        if (item.category === 'security') {
+          badgeColor = "bg-purple-50 text-purple-700 border-purple-200";
+          displayCategory = "SECURITY";
+        } else if (item.category === 'error') {
+          badgeColor = "bg-red-50 text-red-700 border-red-200";
+          displayCategory = "CRITICAL";
+        } else if (item.category === 'warning') {
+          badgeColor = "bg-amber-50 text-amber-700 border-amber-200";
+          displayCategory = "WARNING";
+        } else {
+          badgeColor = "bg-emerald-50 text-emerald-700 border-emerald-200";
+          displayCategory = "ROUTINE";
+        }
+
+        const confidencePct = (item.confidence * 100).toFixed(1);
+        const reviewBadge = item.needs_review 
+          ? `<span id="review-badge-${item.log_id}" title="Model confidence is low. Click 'Teach Model' to verify or correct." class="px-2 py-0.5 text-xs font-mono font-semibold bg-amber-50 text-amber-800 border border-amber-200 rounded flex items-center space-x-1 cursor-help"><span>⚠️</span><span>UNCERTAIN · VERIFY</span></span>` 
+          : '';
+
+        card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+              <span id="badge-${item.log_id}" class="px-2.5 py-0.5 rounded text-xs font-mono font-bold border ${badgeColor}">
+                ${displayCategory}
+              </span>
+              ${reviewBadge}
+            </div>
+            <div class="text-xs font-mono text-[#a1a19d]">
+              log_id: ${item.log_id.slice(0, 8)}
+            </div>
+          </div>
+
+          <div class="p-2.5 bg-[#fdfdfc] border border-[#eeeeec] rounded font-mono text-xs text-[#111110] break-all select-all">
+            ${escapeHtml(item.message || '')}
+          </div>
+
+          <div class="flex items-center justify-between pt-1">
+            <div class="flex items-center space-x-3 text-xs font-mono">
+              <span class="text-[#737370]">CONFIDENCE:</span>
+              <span class="font-bold text-[#111110]">${confidencePct}%</span>
+              <div class="w-20 bg-[#eeeeec] h-1.5 rounded-full overflow-hidden inline-block">
+                <div class="bg-black h-1.5 rounded-full" style="width: ${confidencePct}%"></div>
+              </div>
+            </div>
+
+            <div class="relative popover-anchor">
+              <button 
+                onclick="toggleCorrectionPopover('${item.log_id}', event)" 
+                class="btn-tactile text-xs font-mono px-3 py-1 border border-[#e5e5e3] hover:border-black rounded text-[#111110] bg-white transition flex items-center space-x-1.5 font-medium shadow-xs"
+              >
+                <span>✏️ TEACH MODEL</span>
+                <span>▾</span>
+              </button>
+
+              <div 
+                id="popover-${item.log_id}" 
+                class="hidden popover-spring absolute right-0 bottom-8 z-30 w-48 bg-white border border-[#e5e5e3] rounded-lg shadow-lg p-1.5 space-y-1 text-xs font-mono"
+              >
+                <div class="text-[10px] text-[#737370] px-2 py-1 uppercase font-semibold border-b border-[#eeeeec]">TEACH TRUE LABEL</div>
+                <div class="text-[9px] text-[#a1a19d] px-2 pb-1">Retrains AI on your custom patterns</div>
+                <button onclick="submitCorrection('${item.log_id}', 'security')" class="w-full text-left px-2 py-1 hover:bg-[#f5f5f3] rounded text-purple-700">● SECURITY</button>
+                <button onclick="submitCorrection('${item.log_id}', 'error')" class="w-full text-left px-2 py-1 hover:bg-[#f5f5f3] rounded text-red-700">● CRITICAL</button>
+                <button onclick="submitCorrection('${item.log_id}', 'warning')" class="w-full text-left px-2 py-1 hover:bg-[#f5f5f3] rounded text-amber-700">● WARNING</button>
+                <button onclick="submitCorrection('${item.log_id}', 'noise')" class="w-full text-left px-2 py-1 hover:bg-[#f5f5f3] rounded text-emerald-700">● ROUTINE</button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        list.appendChild(card);
+      });
+
+      if (routineHiddenCount > 0 && currentFilter === 'attention') {
+        suppressedNote.innerText = `(${routineHiddenCount} routine logs safely suppressed)`;
+      } else {
+        suppressedNote.innerText = '';
+      }
+    }
+
+    function toggleCorrectionPopover(logId, event) {
+      if (event) event.stopPropagation();
+      document.querySelectorAll('[id^="popover-"]').forEach(el => {
+        if (el.id !== `popover-${logId}`) el.classList.add('hidden');
+      });
+      const el = document.getElementById(`popover-${logId}`);
+      if (el) el.classList.toggle('hidden');
+    }
+
+    // Dismiss popovers when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.popover-anchor')) {
+        document.querySelectorAll('[id^="popover-"]').forEach(el => el.classList.add('hidden'));
+      }
+    });
+
+    async function submitCorrection(logId, trueCategory) {
+      const item = currentResultsMap.get(logId);
+      if (!item) return;
+
+      const popover = document.getElementById(`popover-${logId}`);
+      if (popover) popover.classList.add('hidden');
+
+      try {
+        const res = await fetch('/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            log_id: logId,
+            message: item.message,
+            predicted_category: item.category,
+            true_category: trueCategory
+          })
+        });
+
+        if (res.ok) {
+          showToast(`Correction saved: "${trueCategory.toUpperCase()}" (Queued for retrain)`);
+          
+          // In-place UI update for immediate feedback
+          const badgeEl = document.getElementById(`badge-${logId}`);
+          if (badgeEl) {
+            let badgeColor = "bg-neutral-100 text-neutral-700 border-neutral-200";
+            let displayCat = trueCategory.toUpperCase();
+            if (trueCategory === 'security') {
+              badgeColor = "bg-purple-50 text-purple-700 border-purple-200";
+              displayCat = "SECURITY";
+            } else if (trueCategory === 'error') {
+              badgeColor = "bg-red-50 text-red-700 border-red-200";
+              displayCat = "CRITICAL";
+            } else if (trueCategory === 'warning') {
+              badgeColor = "bg-amber-50 text-amber-700 border-amber-200";
+              displayCat = "WARNING";
+            } else {
+              badgeColor = "bg-emerald-50 text-emerald-700 border-emerald-200";
+              displayCat = "ROUTINE";
+            }
+            badgeEl.className = `px-2.5 py-0.5 rounded text-xs font-mono font-bold border ${badgeColor}`;
+            badgeEl.innerText = `${displayCat} (CORRECTED)`;
+          }
+          const reviewBadgeEl = document.getElementById(`review-badge-${logId}`);
+          if (reviewBadgeEl) {
+            reviewBadgeEl.remove();
+          }
+
+          fetchStats();
+        } else {
+          showToast("Failed to save feedback", true);
+        }
+      } catch (err) {
+        showToast(`Feedback error: ${err.message}`, true);
+      }
+    }
+
+    // Emil Kowalski Sonner-Style Toast
+    function showToast(message, isError = false) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `toast-spring pointer-events-auto flex items-center space-x-2 px-3.5 py-2.5 rounded-lg border text-xs font-mono shadow-md ${
+        isError ? 'bg-red-50 text-red-800 border-red-200' : 'bg-[#111110] text-white border-black'
+      }`;
+      toast.innerHTML = `
+        <span>${isError ? '✕' : '✓'}</span>
+        <span>${message}</span>
+      `;
+
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(6px)';
+        toast.style.transition = 'all 180ms ease-out';
+        setTimeout(() => toast.remove(), 180);
+      }, 3200);
+    }
+
+    function escapeHtml(string) {
+      return String(string)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Keyboard shortcut for classification: Ctrl+Enter or Cmd+Enter
+    document.getElementById('log-input').addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        executeClassification();
+      }
+    });
+
+    // Initial setup
+    loadPreset('security');
+    fetchStats();
+  </script>
+</body>
+</html>

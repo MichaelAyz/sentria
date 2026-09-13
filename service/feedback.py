@@ -1,7 +1,6 @@
 import sqlite3
 import os
-
-DB_PATH = "service/feedback.db"
+DB_PATH = os.getenv("DB_PATH", "service/data/feedback.db")
 
 def setup_database():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -29,3 +28,16 @@ def save_feedback(log_id: str, message: str, predicted_category: str, true_categ
     """, (log_id, message, predicted_category, true_category))
     conn.commit()
     conn.close()
+
+def get_feedback_count() -> int:
+    if not os.path.exists(DB_PATH):
+        return 0
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT COUNT(*) FROM feedback")
+        count = cursor.fetchone()[0]
+        conn.close()
+        return count
+    except Exception:
+        return 0
