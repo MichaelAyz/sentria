@@ -1,0 +1,277 @@
+[
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/health 200 OK 3.2ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /static/chunks/main-app.js 200 OK 0.8ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "POST /api/v1/telemetry 204 No Content 5.4ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/user/profile 200 OK 18.2ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/dashboard/metrics 200 OK 24.1ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Session refreshed for user deploy_agent from 10.0.1.25",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Cache hit for key catalog:featured:items:v2",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Worker thread pool initialized with 4 worker threads",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"a3f89b12c\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Read more: https://nextjs.org/docs/messages/failed-to-find-server-action",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at ignore-listed frames",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at async resolveServerAction (node_modules/next/dist/server/app-render/action-handler.js:142:15)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"d9e8712bc\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"f512c98a1\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "TypeError: Cannot read properties of undefined (reading 'getProfile')",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at UserController.handle (src/controllers/user.ts:54:19)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "TypeError: item.items.map is not a function",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at renderCatalog (src/components/catalog.tsx:88:24)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "SyntaxError: Unexpected token m in JSON at position 2",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at JSON.parse (<anonymous>)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at parseRequestBody (src/middleware/parser.ts:22:12)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "ReferenceError: activeTenantConfig is not defined",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "RangeError: Maximum call stack size exceeded",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "RangeError: Invalid array length",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "URIError: URI malformed at decodeURI (<anonymous>)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "DatabaseError: Connection pool exhausted after 30000ms while acquiring client connection",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "DatabaseError: Connection lost - server closed the socket unexpectedly",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://payment.internal/v1/charge failed, reason: connect ECONNREFUSED 10.0.4.12:443",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://api.partner.com/v2/webhooks failed, reason: socket hang up",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://storage.s3.internal/uploads failed, reason: ETIMEDOUT",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: getaddrinfo ENOTFOUND internal-service.mesh",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: listen EADDRINUSE: address already in use 0.0.0.0:3000",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "InvariantViolation: Expected active session but received null",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "ValidationError: User email \"invalid-email\" violates RFC 5322 regex",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] JWT signature validation failed for issuer https://auth.prod.internal: token expired at 1726308000",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] JsonWebTokenError: invalid signature on bearer token",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CORS policy violation: Origin https://evil-site.com not allowed by Access-Control-Allow-Origin",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CSRF token mismatch: Expected 9b2d... but received invalid_token_xyz",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Rate limit threshold reached for client IP 192.168.1.105 (429 Too Many Requests)",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Malicious path traversal attempted in static file handler: /../../etc/passwd",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CSP violation blocked inline script execution with sha256-hash abc123",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] SSRF protection blocked outgoing HTTP request to AWS metadata endpoint 169.254.169.254",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Detected SQL injection pattern in query param order_by: UNION SELECT * FROM secrets",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Brute force login threshold exceeded: 10 failed attempts for account admin@company.com",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) [DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Node.js heap memory usage at 88.4% (1768MB / 2000MB limit)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Slow query detected on table \"audit_logs\" taking 3450ms (threshold: 1000ms)",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Client 10.0.2.14 consumed 92% of allotted request quota (920/1000 requests in 60s window)",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] LRU cache capacity reached 98% (49000/50000 entries), accelerating TTL eviction",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Gateway response from service-auth took 2890ms, exceeding P99 threshold of 1500ms",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Outgoing webhook delivery retry #3 for event order.created to https://client.api/hook",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] DNS lookup took 1240ms for host external.service.com, potential latency degradation",
+    "category": "warning"
+  }
+]

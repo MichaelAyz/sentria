@@ -1,0 +1,1287 @@
+[
+  {
+    "system": "postgresql",
+    "raw_log": "The files belonging to this database system will be owned by user \"postgres\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "This user must also own the server process.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The database cluster will be initialized with locale \"en_US.utf8\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The default database encoding has accordingly been set to \"UTF8\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The default text search configuration will be set to \"english\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "Data page checksums are disabled.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "fixing permissions on existing directory /var/lib/postgresql/data ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "creating subdirectories ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting dynamic shared memory implementation ... posix",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default max_connections ... 100",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default shared_buffers ... 128MB",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default time zone ... UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "creating configuration files ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "running bootstrap script ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "performing post-bootstrap initialization ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "syncing data to disk ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "Success. You can now start the database server using:",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "pg_ctl -D /var/lib/postgresql/data -l logfile start",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "waiting for server to start....2026-09-15 07:32:15.764 UTC [41] LOG:  starting PostgreSQL 15.18 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.771 UTC [41] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.792 UTC [44] LOG:  database system was shut down at 2026-09-15 07:32:15 UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "done",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "server started",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.833 UTC [50] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.834 UTC [50] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.850 UTC [50] LOG:  statement: SELECT 1 FROM pg_database WHERE datname = 'postgres' ;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.852 UTC [50] LOG:  disconnection: session time: 0:00:00.019 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "waiting for server to shut down...2026-09-15 07:32:15.855 UTC [41] LOG:  received fast shutdown request",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": ".2026-09-15 07:32:15.861 UTC [41] LOG:  aborting any active transactions",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.864 UTC [41] LOG:  background worker \"logical replication launcher\" (PID 47) exited with exit code 1",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.865 UTC [42] LOG:  shutting down",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.871 UTC [42] LOG:  checkpoint starting: shutdown immediate",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.909 UTC [42] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.012 s, sync=0.006 s, total=0.045 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.916 UTC [41] LOG:  database system is shut down",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "server stopped",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "PostgreSQL init process complete; ready for start up.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "sh: locale: not found",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:14.551 UTC [35] WARNING:  no usable system locales were found",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "initdb: warning: enabling \"trust\" authentication for local connections",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.001 UTC [1] LOG:  starting PostgreSQL 15.18 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.002 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.002 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.017 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.032 UTC [55] LOG:  database system was shut down at 2026-09-15 07:32:15 UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.662 UTC [65] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.663 UTC [65] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.679 UTC [65] LOG:  statement: SELECT 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.680 UTC [65] LOG:  disconnection: session time: 0:00:00.017 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.930 UTC [72] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.931 UTC [72] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.933 UTC [72] LOG:  statement: CREATE TABLE accounts (id serial primary key, name text not null, balance int check (balance >= 0), code varchar(4));",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.965 UTC [72] LOG:  disconnection: session time: 0:00:00.035 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.195 UTC [79] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.196 UTC [79] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.199 UTC [79] LOG:  statement: CREATE TABLE orders (order_id serial primary key, account_id int references accounts(id));",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.228 UTC [79] LOG:  disconnection: session time: 0:00:00.033 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.478 UTC [86] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.479 UTC [86] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.481 UTC [86] LOG:  statement: INSERT INTO accounts (name, balance, code) VALUES ('alice', 100, 'A01'), ('bob', 200, 'B02');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.523 UTC [86] LOG:  disconnection: session time: 0:00:00.044 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.758 UTC [93] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.759 UTC [93] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.760 UTC [93] LOG:  statement: SELECT balance FROM accounts WHERE name = 'alice';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.763 UTC [93] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.035 UTC [100] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.036 UTC [100] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.039 UTC [100] LOG:  statement: UPDATE accounts SET balance = balance + 10 WHERE name = 'bob';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.046 UTC [100] LOG:  disconnection: session time: 0:00:00.010 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.286 UTC [107] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.286 UTC [107] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] LOG:  statement: SELECT * FROM missing_table_catalog;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] ERROR:  relation \"missing_table_catalog\" does not exist at character 15",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] STATEMENT:  SELECT * FROM missing_table_catalog;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.530 UTC [115] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.531 UTC [115] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.532 UTC [115] ERROR:  syntax error at or near \"INVALID\" at character 1",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.532 UTC [115] STATEMENT:  INVALID QUERY GRAMMAR FAIL;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.533 UTC [115] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.811 UTC [122] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.812 UTC [122] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.814 UTC [122] LOG:  statement: INSERT INTO accounts (id, name, balance) VALUES (1, 'conflict', 50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] ERROR:  duplicate key value violates unique constraint \"accounts_pkey\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] DETAIL:  Key (id)=(1) already exists.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] STATEMENT:  INSERT INTO accounts (id, name, balance) VALUES (1, 'conflict', 50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.817 UTC [122] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.178 UTC [129] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.179 UTC [129] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.181 UTC [129] LOG:  statement: SELECT balance / 0 FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.183 UTC [129] ERROR:  division by zero",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.183 UTC [129] STATEMENT:  SELECT balance / 0 FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.184 UTC [129] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.430 UTC [136] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.431 UTC [136] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.433 UTC [136] LOG:  statement: UPDATE accounts SET balance = 'invalid_number' WHERE id = 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.434 UTC [136] ERROR:  invalid input syntax for type integer: \"invalid_number\" at character 31",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.434 UTC [136] STATEMENT:  UPDATE accounts SET balance = 'invalid_number' WHERE id = 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.435 UTC [136] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.680 UTC [143] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.681 UTC [143] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.683 UTC [143] LOG:  statement: SELECT invalid_column_name FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.684 UTC [143] ERROR:  column \"invalid_column_name\" does not exist at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.684 UTC [143] STATEMENT:  SELECT invalid_column_name FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.685 UTC [143] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.968 UTC [150] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.970 UTC [150] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.972 UTC [150] LOG:  statement: INSERT INTO orders (account_id) VALUES (99999);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] ERROR:  insert or update on table \"orders\" violates foreign key constraint \"orders_account_id_fkey\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] DETAIL:  Key (account_id)=(99999) is not present in table \"accounts\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] STATEMENT:  INSERT INTO orders (account_id) VALUES (99999);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] LOG:  disconnection: session time: 0:00:00.007 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.202 UTC [157] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.203 UTC [157] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.204 UTC [157] LOG:  statement: INSERT INTO accounts (name, balance) VALUES ('charlie', -50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] ERROR:  new row for relation \"accounts\" violates check constraint \"accounts_balance_check\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] DETAIL:  Failing row contains (3, charlie, -50, null).",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] STATEMENT:  INSERT INTO accounts (name, balance) VALUES ('charlie', -50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.207 UTC [157] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.413 UTC [164] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.414 UTC [164] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.416 UTC [164] LOG:  statement: INSERT INTO accounts (name, balance) VALUES (NULL, 30);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] ERROR:  null value in column \"name\" of relation \"accounts\" violates not-null constraint",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] DETAIL:  Failing row contains (4, null, 30, null).",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] STATEMENT:  INSERT INTO accounts (name, balance) VALUES (NULL, 30);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.620 UTC [171] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.621 UTC [171] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] LOG:  statement: SELECT non_existent_function_call(1, 2);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] ERROR:  function non_existent_function_call(integer, integer) does not exist at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] STATEMENT:  SELECT non_existent_function_call(1, 2);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.859 UTC [178] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.860 UTC [178] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.861 UTC [178] LOG:  statement: INSERT INTO accounts (name, balance, code) VALUES ('dave', 10, 'TOOLONGSTRING');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.862 UTC [178] ERROR:  value too long for type character varying(4)",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.862 UTC [178] STATEMENT:  INSERT INTO accounts (name, balance, code) VALUES ('dave', 10, 'TOOLONGSTRING');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.863 UTC [178] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.079 UTC [185] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.079 UTC [185] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] LOG:  statement: SELECT date '2026-02-31';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] ERROR:  date/time field value out of range: \"2026-02-31\" at character 13",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] STATEMENT:  SELECT date '2026-02-31';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.082 UTC [185] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.300 UTC [192] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.301 UTC [192] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.303 UTC [192] LOG:  statement: SELECT accounts.id FROM accounts JOIN orders ON accounts.id = orders.order_id GROUP BY balance;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] ERROR:  column \"accounts.id\" must appear in the GROUP BY clause or be used in an aggregate function at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] STATEMENT:  SELECT accounts.id FROM accounts JOIN orders ON accounts.id = orders.order_id GROUP BY balance;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.576 UTC [199] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.577 UTC [199] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.579 UTC [199] LOG:  statement: BEGIN READ ONLY; INSERT INTO accounts (name, balance) VALUES ('test', 10); COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.580 UTC [199] ERROR:  cannot execute INSERT in a read-only transaction",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.580 UTC [199] STATEMENT:  BEGIN READ ONLY; INSERT INTO accounts (name, balance) VALUES ('test', 10); COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.581 UTC [199] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.831 UTC [206] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.833 UTC [206] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.836 UTC [206] LOG:  statement: BEGIN; SELECT 1/0; SELECT 1; COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.837 UTC [206] ERROR:  division by zero",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.837 UTC [206] STATEMENT:  BEGIN; SELECT 1/0; SELECT 1; COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.838 UTC [206] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.094 UTC [213] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.095 UTC [213] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.097 UTC [213] LOG:  statement: SET statement_timeout = '10ms'; SELECT pg_sleep(0.5);",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.107 UTC [213] ERROR:  canceling statement due to statement timeout",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.107 UTC [213] STATEMENT:  SET statement_timeout = '10ms'; SELECT pg_sleep(0.5);",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.108 UTC [213] LOG:  disconnection: session time: 0:00:00.013 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.387 UTC [220] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.388 UTC [220] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.391 UTC [220] LOG:  statement: CREATE TABLE accounts (id int);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] ERROR:  relation \"accounts\" already exists",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] STATEMENT:  CREATE TABLE accounts (id int);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.676 UTC [227] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.678 UTC [227] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] LOG:  statement: SELECT 'invalid_uuid'::uuid;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] ERROR:  invalid input syntax for type uuid: \"invalid_uuid\" at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] STATEMENT:  SELECT 'invalid_uuid'::uuid;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.681 UTC [227] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.962 UTC [234] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.963 UTC [234] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] LOG:  statement: COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] WARNING:  there is no transaction in progress",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.204 UTC [241] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.205 UTC [241] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] LOG:  statement: ROLLBACK;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] WARNING:  there is no transaction in progress",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.444 UTC [248] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.445 UTC [248] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.447 UTC [248] LOG:  statement: DROP TABLE IF EXISTS non_existent_table_xyz;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.447 UTC [248] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.682 UTC [255] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.683 UTC [255] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.686 UTC [255] LOG:  statement: DROP INDEX IF EXISTS non_existent_index_abc;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.686 UTC [255] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.954 UTC [263] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.956 UTC [263] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.958 UTC [263] LOG:  statement: DROP SEQUENCE IF EXISTS non_existent_sequence_123;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.959 UTC [263] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.197 UTC [270] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.198 UTC [270] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.200 UTC [270] LOG:  statement: SET standard_conforming_strings = off; SELECT 'warning_escape\\\\pattern';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.201 UTC [270] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.437 UTC [277] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.439 UTC [277] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.440 UTC [277] LOG:  statement: TRUNCATE TABLE accounts CASCADE;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.476 UTC [277] LOG:  disconnection: session time: 0:00:00.039 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.700 UTC [284] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.702 UTC [284] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.704 UTC [284] LOG:  statement: VACUUM (VERBOSE) accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.708 UTC [284] LOG:  disconnection: session time: 0:00:00.007 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.946 UTC [291] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.947 UTC [291] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.949 UTC [291] LOG:  statement: SET client_min_messages = WARNING;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.949 UTC [291] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.211 UTC [298] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.212 UTC [298] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.213 UTC [298] LOG:  statement: DISCARD ALL;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.214 UTC [298] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.451 UTC [306] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.452 UTC [306] LOG:  connection authorized: user=root database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.452 UTC [306] FATAL:  role \"root\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.734 UTC [313] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.735 UTC [313] LOG:  connection authorized: user=admin database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.735 UTC [313] FATAL:  role \"admin\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.013 UTC [320] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.015 UTC [320] LOG:  connection authorized: user=guest database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.015 UTC [320] FATAL:  role \"guest\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.271 UTC [327] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.272 UTC [327] LOG:  connection authorized: user=deploy_bot database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.272 UTC [327] FATAL:  role \"deploy_bot\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.571 UTC [334] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.572 UTC [334] LOG:  connection authorized: user=postgres_admin database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.572 UTC [334] FATAL:  role \"postgres_admin\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.824 UTC [341] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.825 UTC [341] LOG:  connection authorized: user=sql_user database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.825 UTC [341] FATAL:  role \"sql_user\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.044 UTC [349] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.045 UTC [349] LOG:  connection authorized: user=attacker_ip database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.045 UTC [349] FATAL:  role \"attacker_ip\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.266 UTC [356] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.267 UTC [356] LOG:  connection authorized: user=service_daemon database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.267 UTC [356] FATAL:  role \"service_daemon\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] LOG:  connection authorized: user=scanner_agent database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] FATAL:  role \"scanner_agent\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.767 UTC [370] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.768 UTC [370] LOG:  connection authorized: user=audit_test database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.768 UTC [370] FATAL:  role \"audit_test\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.991 UTC [377] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.992 UTC [377] LOG:  connection authorized: user=postgres database=restricted_confidential_db application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.992 UTC [377] FATAL:  database \"restricted_confidential_db\" does not exist",
+    "category": "security"
+  }
+]

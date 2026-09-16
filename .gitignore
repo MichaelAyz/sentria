@@ -28,21 +28,26 @@ ENV/
 env.bak/
 venv.bak/
 .idea/
+.vscode/
 
 # Databases
 *.sqlite3
 *.db
 service/data/*.db
 
-# Generated training datasets (we commit generator and curation code, not large generated CSVs)
+# Generated training datasets
 training/data/*.csv
 
 # Logs & test artifacts
 *.log
+vulnwatch-frontend-production-2026-08-18.log
 .pytest_cache/
 
+# Large FP32 ONNX weights (we commit the INT8 quantized runtime model, not the 90MB FP32 model)
+service/onnx/model.onnx
 
+# Task specs & local artifacts
+SENTRIA_Task_Spec.md
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
-.gitignore

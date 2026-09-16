@@ -1,0 +1,23 @@
+# Vector Configuration Recipe for Sentria
+# Collects log files and streams them in batches to Sentria's /ingest/raw endpoint
+
+[sources.system_logs]
+type = "file"
+include = ["/var/log/*.log", "/var/log/syslog"]
+read_from = "beginning"
+
+[sinks.sentria]
+type = "http"
+inputs = ["system_logs"]
+uri = "http://127.0.0.1:8000/ingest/raw?source=vector"
+method = "post"
+
+[sinks.sentria.encoding]
+codec = "raw_message"
+
+[sinks.sentria.request.headers]
+"Content-Type" = "text/plain"
+
+[sinks.sentria.batch]
+max_events = 50
+timeout_secs = 2

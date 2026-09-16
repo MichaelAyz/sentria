@@ -1,0 +1,20 @@
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:01 srv-01 sshd[24011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.", "category": "error"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:04:30 srv-01 sshd[24209]: Invalid user admin from 52.80.34.196 port 55102", "category": "security"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:05 srv-01 sshd[24015]: fatal: daemon() failed: No such file or directory", "category": "error"}
+{"system": "nextjs_node", "raw_log": "Cache hit for key catalog:featured:items:v2", "category": "noise"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.env HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"", "category": "security"}
+{"system": "kubernetes", "raw_log": "k8s event: [Normal] reason=Created component=kubelet msg=\"Container created\"", "category": "noise"}
+{"system": "nextjs_node", "raw_log": "(node:1234) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit", "category": "warning"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *37 open() \"/usr/share/nginx/html/images/logo-missing.png\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /images/logo-missing.png HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "error"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:27:00 srv-01 sshd[24295]: pam_warn(sshd:auth): function=[pam_sm_authenticate] flags=0 service=[sshd]", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:26.452 UTC [306] FATAL:  role \"root\" does not exist", "category": "security"}
+{"system": "auth_ssh", "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: pam_unix(sshd:session): session closed for user deploy", "category": "noise"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.965 UTC [234] WARNING:  there is no transaction in progress", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:15:10 srv-01 sshd[24222]: Timeout before authentication for 103.152.220.10 port 44321", "category": "warning"}
+{"system": "nextjs_node", "raw_log": "at UserController.handle (src/controllers/user.ts:54:19)", "category": "error"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.392 UTC [220] ERROR:  relation \"accounts\" already exists", "category": "error"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /empty_dir/ HTTP/1.1\" 403 153 \"-\" \"Python-urllib/3.14\"", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:22.081 UTC [185] LOG:  statement: SELECT date '2026-02-31';", "category": "noise"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /index.html HTTP/1.1\" 200 896 \"-\" \"HealthCheck/1.0\"", "category": "noise"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Disconnecting invalid user webmaster 173.234.31.186 port 38926: Too many authentication failures [preauth]", "category": "security"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] Detected SQL injection pattern in query param order_by: UNION SELECT * FROM secrets", "category": "security"}

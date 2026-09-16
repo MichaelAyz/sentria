@@ -1,0 +1,352 @@
+[
+  {
+    "system": "redis",
+    "raw_log": "Starting Redis Server",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * Redis version=8.10.1, bits=64, commit=00000000, modified=1, pid=1, just started",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * Configuration loaded",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.412 * monotonic clock: POSIX clock_gettime",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.414 * Running mode=standalone, port=6379.",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> RedisBloom version 8.10.1 (Git=unknown)",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> Registering configuration options: [",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-error-rate       :      0.01 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-initial-size     :       100 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-expansion-factor :         2 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-bucket-size      :         2 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-initial-size     :      1024 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-max-iterations   :        20 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-expansion-factor :         1 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-max-expansions   :        32 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> ]",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.418 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> search-workers default: 12 (min of MAX_WORKER_THREADS=16 and CPU cores)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Redis version found by RedisSearch : 8.10.1 - oss",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> RediSearch version 8.10.0 (Git=)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD,",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Initialized thread pools!",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Enabled workers threadpool of size 12",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to config changes",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to cluster slot migration events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to cluster topology change events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Enabled role change notification",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.459 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> RedisTimeSeries version 81000, git_sha=",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Redis version found by RedisTimeSeries : 8.10.1 - oss",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Registering configuration options: [",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-compaction-policy   :              }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-num-threads         :            3 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-libmr-protocol      :     INTERNAL }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-retention-policy    :            0 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-duplicate-policy    :        block }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-chunk-size-bytes    :         4096 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-encoding            :   compressed }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-ignore-max-time-diff:            0 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-ignore-max-val-diff :     0.000000 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-topology-events     :         true }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> ]",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Detected redis oss (cluster-enabled=no)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to ASM events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to topology changes events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Enabled diskless replication",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.492 * <ReJSON> Created new data type 'ReJSON-RL'",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.492 * <ReJSON> version: 81000 git sha: unknown branch: unknown",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V1 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V2 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V3 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V4 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V5 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V6 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V7 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V8 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Enabled diskless replication",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Initialized shared string cache, thread safe: true.",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <search> Acquired RedisJSON_V8 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * Server initialized",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.494 * Ready to accept connections tcp",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:39.319 * Background saving started by pid 158",
+    "category": "warning"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.321 * BGSAVE done, 0 keys saved, 0 keys skipped, 89 bytes written.",
+    "category": "warning"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.333 * DB saved on disk",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.334 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:39.433 * Background saving terminated with success",
+    "category": "warning"
+  }
+]

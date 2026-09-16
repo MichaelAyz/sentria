@@ -1,0 +1,252 @@
+[
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: reverse mapping checking getaddrinfo for ns.malicious-domain.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: Invalid user webmaster from 173.234.31.186 port 38926",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: input_userauth_request: invalid user webmaster [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: pam_unix(sshd:auth): check pass; user unknown",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:46 srv-01 sshd[24200]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.234.31.186",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Disconnecting invalid user webmaster 173.234.31.186 port 38926: Too many authentication failures [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:01:12 srv-01 sshd[24204]: Failed password for root from 218.92.0.15 port 48921 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:01:14 srv-01 sshd[24204]: Failed password for invalid user test from 218.92.0.15 port 48921 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:04:30 srv-01 sshd[24209]: Invalid user admin from 52.80.34.196 port 55102",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:04:32 srv-01 sshd[24209]: Failed password for invalid user admin from 52.80.34.196 port 55102 ssh2",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:09:15 srv-01 sshd[24215]: Disconnecting authenticating user root 185.156.73.41 port 41200: Change of username disallowed [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:11:00 srv-01 sshd[24218]: error: kex_exchange_identification: banner line contains invalid characters from 194.26.29.112 port 39812",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:12:45 srv-01 sshd[24225]: userauth_pubkey: key type ssh-dss not in PubkeyAcceptedAlgorithms [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:13:10 srv-01 sshd[24228]: error: maximum authentication attempts exceeded for invalid user oracle from 84.17.45.10 port 49120 ssh2 [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:14:02 srv-01 sshd[24230]: fatal: userauth_pubkey: parse publickey packet: corrupted [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:15:33 srv-01 sshd[24235]: Postponed keyboard-interactive for invalid user guest from 103.21.244.1 port 52100 ssh2 [preauth]",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:16:01 srv-01 sshd[24240]: pam_succeed_if(sshd:auth): requirement \"uid >= 1000\" not met by user \"daemon\"",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:17:15 srv-01 sshd[24245]: User root not allowed because not listed in AllowUsers",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:18:20 srv-01 sshd[24250]: User admin from 198.51.100.44 not allowed because not listed in AllowUsers",
+    "category": "security"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:55:48 srv-01 sshd[24200]: Connection closed by 173.234.31.186 port 38926 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:02:47 srv-01 sshd[24203]: Connection closed by 212.47.254.145 port 51200 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:05:00 srv-01 sshd[24210]: Did not receive identification string from 10.0.0.12 port 58912",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:08:22 srv-01 sshd[24214]: Connection reset by authenticating user root 45.142.214.12 port 50123 [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:15:10 srv-01 sshd[24222]: Timeout before authentication for 103.152.220.10 port 44321",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:20:05 srv-01 sshd[24260]: Corrupted MAC on input. [preauth]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:21:11 srv-01 sshd[24265]: WARNING: /etc/ssh/ssh_host_rsa_key is world readable!",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:22:30 srv-01 sshd[24270]: Permissions 0777 for '/etc/ssh/ssh_host_ecdsa_key' are too open.",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:23:45 srv-01 sshd[24275]: warning: /etc/hosts.allow, line 12: can't verify hostname: getaddrinfo(gw.corp.net) failed",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:24:12 srv-01 sshd[24280]: Bad protocol version identification 'SSH-1.0' from 61.177.173.12 port 38200",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:25:01 srv-01 sshd[24285]: kex_exchange_identification: client sent invalid protocol identifier \"\"",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:26:15 srv-01 sshd[24290]: client_loop: send disconnect: Broken pipe",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 07:27:00 srv-01 sshd[24295]: pam_warn(sshd:auth): function=[pam_sm_authenticate] flags=0 service=[sshd]",
+    "category": "warning"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:00 srv-01 sshd[24010]: error: Could not get shadow information for NOUSER",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:01 srv-01 sshd[24011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:01 srv-01 sshd[24011]: fatal: Cannot bind any address.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:02 srv-01 sshd[24012]: error: open /dev/null failed: Permission denied",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:03 srv-01 sshd[24013]: fatal: sshd: no hostkeys available -- exiting.",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:04 srv-01 sshd[24014]: error: PAM: Authentication failure for legal user testuser from 10.0.1.5",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:05 srv-01 sshd[24015]: fatal: daemon() failed: No such file or directory",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 06:50:06 srv-01 sshd[24016]: error: rexec of /usr/sbin/sshd failed: No such file or directory",
+    "category": "error"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:00:01 srv-01 sshd[25001]: Accepted publickey for deploy from 192.168.1.50 port 51234 ssh2: RSA SHA256:abc12345",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:00:01 srv-01 sshd[25001]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: Received disconnect from 192.168.1.50 port 51234:11: disconnected by user",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 08:15:22 srv-01 sshd[25001]: pam_unix(sshd:session): session closed for user deploy",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:00:00 srv-01 sshd[25050]: Accepted publickey for ubuntu from 192.168.1.55 port 58210 ssh2: ED25519 SHA256:xyz789",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:00:00 srv-01 sshd[25050]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:30:10 srv-01 sshd[25050]: pam_unix(sshd:session): session closed for user ubuntu",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:35:00 srv-01 sshd[25060]: Server listening on 0.0.0.0 port 22.",
+    "category": "noise"
+  },
+  {
+    "system": "auth_ssh",
+    "raw_log": "Dec 10 09:35:00 srv-01 sshd[25060]: Server listening on :: port 22.",
+    "category": "noise"
+  }
+]

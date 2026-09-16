@@ -1,0 +1,142 @@
+[
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=SandboxChanged component=kubelet msg=\"Pod sandbox changed, it will be killed and re-created.\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"sentria:latest\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Created component=kubelet msg=\"Container created\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Started component=kubelet msg=\"Container started\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Starting component=kubelet msg=\"Starting kubelet.\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasSufficientMemory component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasSufficientMemory\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasNoDiskPressure component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasNoDiskPressure\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeHasSufficientPID component=kubelet msg=\"Node sentria-cluster-control-plane status is now: NodeHasSufficientPID\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=NodeAllocatableEnforced component=kubelet msg=\"Updated Node Allocatable limit across pods\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=Rebooted component=kubelet msg=\"Node sentria-cluster-control-plane has been rebooted, boot id: 83c626ff-44d7-4cd0-ad1e-bbc426902390\"",
+    "category": "warning"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Starting component=kubelet msg=\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=RegisteredNode component=node-controller msg=\"Node sentria-cluster-control-plane event: Registered Node sentria-cluster-control-plane in Controller\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Scheduled component=kubelet msg=\"Successfully assigned default/sentria-test-badimage to sentria-cluster-control-plane\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulling component=kubelet msg=\"Pulling image \"nonexistent-registry.internal/fake-app:invalid\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Scheduled component=kubelet msg=\"Successfully assigned default/sentria-test-crash to sentria-cluster-control-plane\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulling component=kubelet msg=\"Pulling image \"busybox\"\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/coredns/coredns:v1.14.2\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=Unhealthy component=kubelet msg=\"Readiness probe failed: HTTP probe failed with statuscode: 503\"",
+    "category": "warning"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/etcd:3.6.8-0\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"docker.io/kindest/kindnetd:v20260528-9350166c\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-apiserver:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-controller-manager:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=LeaderElection component=kube-controller-manager msg=\"sentria-cluster-control-plane_07e39f58-4420-4848-b20c-e9f5c6847105 became leader\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-proxy:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"registry.k8s.io/kube-scheduler:v1.36.1\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=LeaderElection component=default-scheduler msg=\"sentria-cluster-control-plane_293e60f6-8409-4ec6-a0b9-2352775d1d5f became leader\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Normal] reason=Pulled component=kubelet msg=\"Container image \"docker.io/kindest/local-path-provisioner:v20260521-9fb22683\" already present on machine and can be accessed by the pod\"",
+    "category": "noise"
+  },
+  {
+    "system": "kubernetes",
+    "raw_log": "k8s event: [Warning] reason=BackOff component=kubelet msg=\"Back-off restarting failed container local-path-provisioner in pod local-path-provisioner-855c7b7774-wbj6b_local-path-storage(fd6328bf-2941-4296-8c41-55a19612fefa)\"",
+    "category": "error"
+  }
+]
